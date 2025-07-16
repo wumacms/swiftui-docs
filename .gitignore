@@ -1,0 +1,39 @@
+# Node modules
+node_modules/
+
+# VitePress build output
+.vitepress/dist/
+
+# Temp files
+.vitepress/cache/
+.vitepress/.temp/
+.temp/
+.cache/
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local env files
+.env.local
+.env.*.local
+
+# macOS system files
+.DS_Store
+
+# VSCode settings (optional, if you don’t want to track user-specific configs)
+.vscode/
+
+# IDE files
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Optional: ignore lock file if using specific package manager only
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml

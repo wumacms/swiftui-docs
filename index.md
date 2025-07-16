@@ -1,0 +1,24 @@
+---
+# https://vitepress.dev/reference/default-theme-home-page
+layout: home
+
+hero:
+  name: "SwiftUI 从入门到进阶"
+  text: "构建现代 iOS 界面的最佳实践"
+  tagline: "一本专注于 SwiftUI 开发的技术博客"
+  actions:
+    - theme: brand
+      text: 开始阅读
+      link: /markdown-examples
+    - theme: alt
+      text: 查看接口示例
+      link: /api-examples
+
+features:
+  - title: 响应式布局
+    details: 使用声明式语法和布局系统轻松构建适配不同设备的用户界面。
+  - title: 可复用组件
+    details: 学习如何封装通用视图和样式，实现高效、可维护的 UI 架构。
+  - title: 动画与交互
+    details: 借助 SwiftUI 的动画机制，打造流畅且富有表现力的用户体验。
+---
