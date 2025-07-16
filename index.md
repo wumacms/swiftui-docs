@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "SwiftUI 从入门到进阶"
+  name: "SwiftUIX"
   text: "构建现代 iOS 界面的最佳实践"
   tagline: "一本专注于 SwiftUI 开发的技术博客"
   actions:
