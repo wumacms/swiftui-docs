@@ -8,11 +8,11 @@ hero:
   tagline: "一本专注于 SwiftUI 开发的技术博客"
   actions:
     - theme: brand
-      text: 开始阅读
-      link: /markdown-examples
+      text: 基础入门
+      link: /base/1.1_安装Xcode_15
     - theme: alt
-      text: 查看接口示例
-      link: /api-examples
+      text: 进阶教程
+      link: /custom_views/1.1_什么是自定义视图
 
 features:
   - title: 响应式布局
