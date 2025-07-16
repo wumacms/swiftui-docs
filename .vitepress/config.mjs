@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "SwiftUIX",
   description: "收集全网的SwiftUI学习资源，一站式资源导航",
+  base: '/swiftui-docs/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
