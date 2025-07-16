@@ -30,11 +30,11 @@ export default defineConfig({
         text: '教程', items: [
           {
             text: 'SwiftUI开发入门',
-            link: '/base/1.1_安装Xcode_15'
+            link: '/base/'
           },
           {
             text: 'Swift自定义视图组件',
-            link: '/custom_views/1.1_什么是自定义视图'
+            link: '/custom_views/'
           }
         ]
       }
