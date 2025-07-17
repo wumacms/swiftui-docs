@@ -33,8 +33,12 @@ export default defineConfig({
             link: '/base/'
           },
           {
-            text: 'Swift自定义视图组件',
+            text: 'SwiftUI自定义视图组件',
             link: '/custom_views/'
+          },
+          {
+            text: 'SwiftUI网络编程',
+            link: '/network/'
           }
         ]
       }
@@ -347,6 +351,126 @@ export default defineConfig({
           ]
         }
       ],
+      '/network/': [
+        {
+          text: '第1章 理解网络请求核心概念',
+          items: [
+            { text: 'HTTP/HTTPS协议基础', link: '/network/1.1_HTTP、HTTPS协议基础' },
+            { text: '理解RESTful API', link: '/network/1.2_理解RESTful API' },
+            { text: 'JSON数据格式解析', link: '/network/1.3_JSON数据格式解析' },
+            { text: 'HTTP请求方法', link: '/network/1.4_HTTP请求方法' },
+            { text: '状态码的意义', link: '/network/1.5_状态码的意义' },
+          ]
+        },
+        {
+          text: '第2章 使用URLSession发起请求',
+          items: [
+            { text: '创建URL对象', link: '/network/2.1_创建URL对象' },
+            { text: '配置URLRequest', link: '/network/2.2_配置URLRequest' },
+            { text: '使用dataTask发送GET请求', link: '/network/2.3_使用dataTask发送GET请求' },
+            { text: '处理URLSession的回调', link: '/network/2.4_处理URLSession的回调' },
+            { text: '将接收到的Data转换为可用类型', link: '/network/2.5_将接收到的Data转换为可用类型' },
+          ]
+        },
+        {
+          text: '第3章 处理POST请求与请求体',
+          items: [
+            { text: '设置HTTP方法为POST', link: '/network/3.1_设置HTTP方法为POST' },
+            { text: '构建JSON请求体 (body)', link: '/network/3.2_构建JSON请求体' },
+            { text: '使用JSONEncoder编码数据', link: '/network/3.3_使用JSONEncoder编码数据' },
+            { text: '设置HTTP请求头', link: '/network/3.4_设置HTTP请求头' },
+            { text: '发送并处理POST请求的响应', link: '/network/3.5_发送并处理POST请求的响应' },
+          ]
+        },
+        {
+          text: '第4章 数据模型与解码 (Codable)',
+          items: [
+            { text: '定义符合Decodable协议的数据结构', link: '/network/4.1_定义符合Decodable协议的数据结构' },
+            { text: '使用JSONDecoder解码JSON数据', link: '/network/4.2_使用JSONDecoder解码JSON数据' },
+            { text: '处理嵌套JSON对象', link: '/network/4.3_处理嵌套JSON对象' },
+            { text: '处理JSON数组', link: '/network/4.4_处理JSON数组' },
+            { text: '自定义解码策略', link: '/network/4.5_自定义解码策略' },
+          ]
+        },
+        {
+          text: '第5章 状态管理与数据流',
+          items: [
+            { text: '使用@State管理简单的视图状态', link: '/network/5.1_使用@State管理简单的视图状态' },
+            { text: '创建遵循ObservableObject协议的ViewModel', link: '/network/5.2_创建遵循ObservableObject协议的ViewModel' },
+            { text: '使用@Published发布数据变更', link: '/network/5.3_使用@Published发布数据变更' },
+            { text: '在视图中使用@StateObject或@ObservedObject订阅ViewModel', link: '/network/5.4_在视图中使用@StateObject或@ObservedObject订阅ViewModel' },
+            { text: '将网络数据显示在SwiftUI视图上', link: '/network/5.5_将网络数据显示在SwiftUI视图上' },
+          ]
+        },
+        {
+          text: '第6章 异步操作与主线程更新',
+          items: [
+            { text: '理解并发与主线程安全', link: '/network/6.1_理解并发与主线程安全' },
+            { text: '使用DispatchQueue.main.async更新UI', link: '/network/6.2_使用DispatchQueue.main.async更新UI' },
+            { text: '在ViewModel中封装异步网络调用', link: '/network/6.3_在ViewModel中封装异步网络调用' },
+            { text: '显示加载中(Loading)状态', link: '/network/6.4_显示加载中(Loading)状态' },
+            { text: '处理并显示网络错误信息', link: '/network/6.5_处理并显示网络错误信息' },
+          ]
+        },
+        {
+          text: '第7章 使用Async/Await简化异步代码',
+          items: [
+            { text: '将传统闭包回调重构为async函数', link: '/network/7.1_将传统闭包回调重构为async函数' },
+            { text: '使用await调用异步函数', link: '/network/7.2_使用await调用异步函数' },
+            { text: 'URLSession对async/await的支持', link: '/network/7.3_URLSession对async、await的支持' },
+            { text: '创建异步网络请求函数', link: '/network/7.4_创建异步网络请求函数' },
+          ]
+        },
+        {
+          text: '第8章 SwiftUI与Async/Await集成',
+          items: [
+            { text: '在.task视图修饰符中调用异步函数', link: '/network/8.1_在.task视图修饰符中调用异步函数' },
+            { text: '处理异步任务的生命周期', link: '/network/8.2_处理异步任务的生命周期' },
+            { text: '在ViewModel中使用async/await获取数据', link: '/network/8.3_在ViewModel中使用async、await获取数据' },
+            { text: '结构化并发：使用TaskGroup', link: '/network/8.4_结构化并发：使用TaskGroup' },
+            { text: '任务取消(Task Cancellation)的处理', link: '/network/8.5_任务取消(Task Cancellation)的处理' },
+          ]
+        },
+        {
+          text: '第9章 错误处理',
+          items: [
+            { text: '使用do-catch语句处理throws函数', link: '/network/9.1_使用do-catch语句处理throws函数' },
+            { text: '定义自定义错误类型', link: '/network/9.2_定义自定义错误类型' },
+            { text: '从网络层向上传递错误', link: '/network/9.3_从网络层向上传递错误' },
+            { text: '在UI层优雅地展示错误信息', link: '/network/9.4_在UI层优雅地展示错误信息' },
+          ]
+        },
+        {
+          text: '第10章 网络层抽象与设计',
+          items: [
+            { text: '创建通用的APIService层', link: '/network/10.1_创建通用的APIService层' },
+            { text: '使用泛型构建可重用的请求函数', link: '/network/10.2_使用泛型构建可重用的请求函数' },
+            { text: '定义API端点 (Endpoints)', link: '/network/10.3_定义API端点_(Endpoints)' },
+            { text: '依赖注入(Dependency Injection)网络服务', link: '/network/10.4_依赖注入(Dependency_Injection)网络服务' },
+            { text: '编写单元测试与模拟网络请求', link: '/network/10.5_编写单元测试与模拟网络请求' },
+          ]
+        },
+        {
+          text: '第11章 处理复杂网络场景',
+          items: [
+            { text: '处理认证与令牌 (Token)', link: '/network/11.1_处理认证与令牌(Token)' },
+            { text: '刷新令牌 (Refresh Token) 机制', link: '/network/11.2_刷新令牌(Refresh_Token)机制' },
+            { text: '实现请求重试逻辑', link: '/network/11.3_实现请求重试逻辑' },
+            { text: '文件上传与下载', link: '/network/11.4_文件上传与下载' },
+            { text: '配置URLSessionConfiguration', link: '/network/11.5_配置URLSessionConfiguration' },
+          ]
+        },
+        {
+          text: '第12章 第三方库与性能优化',
+          items: [
+            { text: 'Alamofire库简介与集成', link: '/network/12.1_Alamofire库简介与集成' },
+            { text: '使用Alamofire简化请求', link: '/network/12.2_使用Alamofire简化请求' },
+            { text: '缓存策略：实现客户端缓存', link: '/network/12.3_缓存策略：实现客户端缓存' },
+            { text: '图像的异步加载与缓存', link: '/network/12.4_图像的异步加载与缓存' },
+            { text: '使用Combine处理复杂数据流', link: '/network/12.5_使用Combine处理复杂数据流' },
+          ]
+        },
+      ]
     },
 
     socialLinks: [
