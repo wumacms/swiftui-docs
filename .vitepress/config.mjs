@@ -39,6 +39,10 @@ export default defineConfig({
           {
             text: 'SwiftUI网络编程',
             link: '/network/'
+          },
+          {
+            text: 'SwiftUI matchedGeometryEffect',
+            link: '/geometry/'
           }
         ]
       }
@@ -468,6 +472,88 @@ export default defineConfig({
             { text: '缓存策略：实现客户端缓存', link: '/network/12.3_缓存策略：实现客户端缓存' },
             { text: '图像的异步加载与缓存', link: '/network/12.4_图像的异步加载与缓存' },
             { text: '使用Combine处理复杂数据流', link: '/network/12.5_使用Combine处理复杂数据流' },
+          ]
+        },
+      ],
+      '/geometry/': [
+        {
+          text: '第1章 理解 matchedGeometryEffect 的基本原理',
+          items: [
+            { text: '什么是matchedGeometryEffect？', link: '/geometry/1.1_什么是matchedGeometryEffect？' },
+            { text: '核心参数', link: '/geometry/1.2_核心参数' },
+            { text: 'Namespace的作用与创建', link: '/geometry/1.3_Namespace的作用与创建' },
+            { text: '使用@Namespace创建动画命名空间', link: '/geometry/1.4_使用@Namespace创建动画命名空间' },
+            { text: 'id参数：标识视图的唯一性', link: '/geometry/1.5_id参数：标识视图的唯一性' },
+          ]
+        },
+        {
+          text: '第2章 实现简单的视图过渡动画',
+          items: [
+            { text: '在两个独立视图之间创建过渡', link: '/geometry/2.1_在两个独立视图之间创建过渡' },
+            { text: '使用@State切换视图状态以触发动画', link: '/geometry/2.2_使用@State切换视图状态以触发动画' },
+            { text: '同步源视图与目标视图的几何属性', link: '/geometry/2.3_同步源视图与目标视图的几何属性' },
+            { text: '基础示例：按钮选择指示器动画', link: '/geometry/2.4_基础示例：按钮选择指示器动画' },
+            { text: '基础示例：缩略图到全屏图的过渡', link: '/geometry/2.5_基础示例：缩略图到全屏图的过渡' },
+          ]
+        },
+        {
+          text: '第3章 控制动画属性与锚点',
+          items: [
+            { text: 'properties参数-仅匹配特定几何属性', link: '/geometry/3.1_properties参数-仅匹配特定几何属性' },
+            { text: '使用.size实现尺寸匹配动画', link: '/geometry/3.2_使用.size实现尺寸匹配动画' },
+            { text: '使用.position实现位置匹配动画', link: '/geometry/3.3_使用.position实现位置匹配动画' },
+            { text: 'anchor 参数：控制动画的对齐基准点', link: '/geometry/3.4_anchor参数：控制动画的对齐基准点' },
+            { text: '不同anchor值的效果对比', link: '/geometry/3.5_不同anchor值的效果对比' },
+          ]
+        },
+        {
+          text: '第4章 在复杂视图结构中应用',
+          items: [
+            { text: '在List或ForEach循环中应用matchedGeometryEffect', link: '/geometry/4.1_在List或ForEach循环中应用matchedGeometryEffect' },
+            { text: '为动态列表项设置唯一的id', link: '/geometry/4.2_为动态列表项设置唯一的id' },
+            { text: '实现列表项到详情页的平滑过渡', link: '/geometry/4.3_实现列表项到详情页的平滑过渡' },
+            { text: '结合ZStack实现视图层级变换动画', link: '/geometry/4.4_结合ZStack实现视图层级变换动画' },
+            { text: '处理不同父视图间的过渡动画', link: '/geometry/4.5_处理不同父视图间的过渡动画' },
+          ]
+        },
+        {
+          text: '第5章 解决常见问题与陷阱',
+          items: [
+            { text: '解决动画闪烁或跳跃问题', link: '/geometry/5.1_解决动画闪烁或跳跃问题' },
+            { text: '处理Namespace作用域不正确的情况', link: '/geometry/5.2_处理Namespace作用域不正确的情况' },
+            { text: '避免在动画期间出现视图拉伸变形', link: '/geometry/5.3_避免在动画期间出现视图拉伸变形' },
+            { text: '调试技巧：使用GeometryReader检查视图帧', link: '/geometry/5.4_调试技巧：使用GeometryReader检查视图帧' },
+            { text: '优化性能：减少不必要的视图重绘', link: '/geometry/5.5_优化性能：减少不必要的视图重绘' },
+          ]
+        },
+        {
+          text: '第6章 项目一：构建类似 App Store 的卡片展开动画',
+          items: [
+            { text: '布局卡片列表界面', link: '/geometry/6.1_布局卡片列表界面' },
+            { text: '创建详情页视图', link: '/geometry/6.2_创建详情页视图' },
+            { text: '使用matchedGeometryEffect连接卡片与详情页', link: '/geometry/6.3_使用matchedGeometryEffect连接卡片与详情页' },
+            { text: '添加背景模糊与关闭按钮动画', link: '/geometry/6.4_添加背景模糊与关闭按钮动画' },
+            { text: '处理滚动视图中的卡片动画', link: '/geometry/6.5_处理滚动视图中的卡片动画' },
+          ]
+        },
+        {
+          text: '第7章 项目二：实现动态标签栏（Tab Bar）指示器动画',
+          items: [
+            { text: '创建自定义标签栏视图', link: '/geometry/7.1_创建自定义标签栏视图' },
+            { text: '为选中的标签添加背景指示器', link: '/geometry/7.2_为选中的标签添加背景指示器' },
+            { text: '使用matchedGeometryEffect实现指示器平滑移动', link: '/geometry/7.3_使用matchedGeometryEffect实现指示器平滑移动' },
+            { text: '同步指示器与页面内容的切换', link: '/geometry/7.4_同步指示器与页面内容的切换' },
+            { text: '调整动画曲线与时长', link: '/geometry/7.5_调整动画曲线与时长' },
+          ]
+        },
+        {
+          text: '第8章 项目三：创建“魔法移动”照片墙效果',
+          items: [
+            { text: '使用LazyVGrid构建照片网格', link: '/geometry/8.1_使用LazyVGrid构建照片网格' },
+            { text: '实现点击缩略图放大为全屏视图', link: '/geometry/8.2_实现点击缩略图放大为全屏视图' },
+            { text: '在网格和全屏视图间应用matchedGeometryEffect', link: '/geometry/8.3_在网格和全屏视图间应用matchedGeometryEffect' },
+            { text: '处理不同宽高比图像的过渡', link: '/geometry/8.4_处理不同宽高比图像的过渡' },
+            { text: '添加手势交互以关闭全屏视图', link: '/geometry/8.5_添加手势交互以关闭全屏视图' },
           ]
         },
       ]
