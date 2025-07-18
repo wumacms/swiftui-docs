@@ -29,21 +29,25 @@ export default defineConfig({
       {
         text: '教程', items: [
           {
-            text: 'SwiftUI开发入门',
+            text: 'SwiftUI 入门',
             link: '/base/'
           },
           {
-            text: 'SwiftUI自定义视图组件',
+            text: 'SwiftUI 视图',
             link: '/custom_views/'
           },
           {
-            text: 'SwiftUI网络编程',
+            text: 'SwiftUI 网络',
             link: '/network/'
           },
           {
-            text: 'SwiftUI matchedGeometryEffect',
+            text: 'SwiftUI 动效',
             link: '/geometry/'
-          }
+          },
+          {
+            text: 'SwiftUI 重构',
+            link: '/refactor/'
+          },
         ]
       }
     ],
@@ -556,6 +560,158 @@ export default defineConfig({
             { text: '添加手势交互以关闭全屏视图', link: '/geometry/8.5_添加手势交互以关闭全屏视图' },
           ]
         },
+      ],
+      '/refactor/': [
+        {
+          text: '第1章 识别并提取可复用视图',
+          collapsed: false,
+          items: [
+            { text: '1.1 识别重复的视图代码块', link: '/refactor/1.1_识别重复的视图代码块' },
+            { text: '1.2 使用struct创建新的自定义View', link: '/refactor/1.2_使用`struct`创建新的自定义View' },
+            { text: '1.3 将提取的视图替换回原代码', link: '/refactor/1.3_将提取的视图替换回原代码' },
+            { text: '1.4 为新视图提供描述性命名', link: '/refactor/1.4_为新视图提供描述性命名' },
+          ]
+        },
+        {
+          text: '第2章 通过属性传递数据',
+          collapsed: false,
+          items: [
+            { text: '2.1 为组件定义let常量属性', link: '/refactor/2.1_为组件定义`let`常量属性' },
+            { text: '2.2 在父视图中初始化并传递数据', link: '/refactor/2.2_在父视图中初始化并传递数据' },
+            { text: '2.3 使用@State管理组件内部状态', link: '/refactor/2.3_使用`@State`管理组件内部状态' },
+            { text: '2.4 区分何时使用let与@State', link: '/refactor/2.4_区分何时使用`let`与`@State`' },
+          ]
+        },
+        {
+          text: '第3章 使用@Binding实现双向数据流',
+          collapsed: false,
+          items: [
+            { text: '3.1 理解@Binding的概念与用途', link: '/refactor/3.1_理解`@Binding`的概念与用途' },
+            { text: '3.2 在子视图中声明@Binding属性', link: '/refactor/3.2_在子视图中声明`@Binding`属性' },
+            { text: '3.3 在父视图中通过$传递绑定', link: '/refactor/3.3_在父视图中通过`$`传递绑定' },
+            { text: '3.4 实现父子视图状态的实时同步', link: '/refactor/3.4_实现父子视图状态的实时同步' },
+          ]
+        },
+        {
+          text: '第4章 通过闭包处理组件事件',
+          collapsed: false,
+          items: [
+            { text: '4.1 在组件中定义动作闭包属性', link: '/refactor/4.1_在组件中定义动作闭包属性' },
+            { text: '4.2 在组件内部的交互控件中调用闭包', link: '/refactor/4.2_在组件内部的交互控件中调用闭包' },
+            { text: '4.3 父视图实现闭包以响应事件', link: '/refactor/4.3_父视图实现闭包以响应事件' },
+            { text: '4.4 传递无参数和带参数的闭包', link: '/refactor/4.4_传递无参数和带参数的闭包' },
+          ]
+        },
+        {
+          text: '第5章 自定义视图修饰符(ViewModifier)',
+          collapsed: false,
+          items: [
+            { text: '5.1 创建符合ViewModifier协议的结构体', link: '/refactor/5.1_创建符合`ViewModifier`协议的结构体' },
+            { text: '5.2 实现body(content:)方法', link: '/refactor/5.2_实现`body(content-)`方法' },
+            { text: '5.3 通过modifier()应用修饰符', link: '/refactor/5.3_通过`modifier()`应用修饰符' },
+            { text: '5.4 使用extension View简化调用', link: '/refactor/5.4_使用`extension View`简化调用' },
+          ]
+        },
+        {
+          text: '第6章 利用泛型构建通用组件',
+          collapsed: false,
+          items: [
+            { text: '6.1 为自定义View添加泛型参数', link: '/refactor/6.1_为自定义View添加泛型参数' },
+            { text: '6.2 使用where子句约束泛型类型', link: '/refactor/6.2_使用`where`子句约束泛型类型' },
+            { text: '6.3 构建通用列表行或容器视图', link: '/refactor/6.3_构建通用列表行或容器视图' },
+            { text: '6.4 泛型在数据展示组件中的应用', link: '/refactor/6.4_泛型在数据展示组件中的应用' },
+          ]
+        },
+        {
+          text: '第7章 使用@ViewBuilder构建灵活的容器',
+          collapsed: false,
+          items: [
+            { text: '7.1 理解@ViewBuilder的作用', link: '/refactor/7.1_理解`@ViewBuilder`的作用' },
+            { text: '7.2 在初始化器或函数参数中使用', link: '/refactor/7.2_在初始化器或函数参数中使用' },
+            { text: '7.3 创建接受多个子视图的自定义容器', link: '/refactor/7.3_创建接受多个子视图的自定义容器' },
+            { text: '7.4 实现类似VStack或HStack的组件', link: '/refactor/7.4_实现类似`VStack`或`HStack`的组件' },
+          ]
+        },
+        {
+          text: '第8章 封装环境对象(EnvironmentObject)',
+          collapsed: false,
+          items: [
+            { text: '8.1 定义ObservableObject作为数据源', link: '/refactor/8.1_定义`ObservableObject`作为数据源' },
+            { text: '8.2 在视图层级高层注入环境对象', link: '/refactor/8.2_在视图层级高层注入环境对象' },
+            { text: '8.3 在子组件中使用@EnvironmentObject访问', link: '/refactor/8.3_在子组件中使用`@EnvironmentObject`访问' },
+            { text: '8.4 环境对象在主题或账户管理中的应用', link: '/refactor/8.4_环境对象在主题或账户管理中的应用' },
+          ]
+        },
+        {
+          text: '第9章 识别巨型视图(Massive View)',
+          collapsed: false,
+          items: [
+            { text: '9.1 检查超过200行的body属性', link: '/refactor/9.1_检查超过200行的`body`属性' },
+            { text: '9.2 识别嵌套层级过深的视图结构', link: '/refactor/9.2_识别嵌套层级过深的视图结构' },
+            { text: '9.3 评估视图是否承担过多职责', link: '/refactor/9.3_评估视图是否承担过多职责' },
+            { text: '9.4 视图逻辑与UI描述混杂的迹象', link: '/refactor/9.4_视图逻辑与UI描述混杂的迹象' },
+          ]
+        },
+        {
+          text: '第10章 识别混乱的状态管理',
+          collapsed: false,
+          items: [
+            { text: '10.1 过度使用@State导致状态分散', link: '/refactor/10.1_过度使用`@State`导致状态分散' },
+            { text: '10.2 不恰当的@ObservedObject刷新', link: '/refactor/10.2_不恰当的`@ObservedObject`刷新' },
+            { text: '10.3 数据源不明确', link: '/refactor/10.3_数据源不明确（Source of Truth混乱）' },
+            { text: '10.4 @Binding链条过长难以追踪', link: '/refactor/10.4_`@Binding`链条过长难以追踪' },
+          ]
+        },
+        {
+          text: '第11章 识别不当的逻辑放置',
+          collapsed: false,
+          items: [
+            { text: '11.1 在body中执行复杂的计算', link: '/refactor/11.1_在`body`中执行复杂的计算或数据转换' },
+            { text: '11.2 网络请求或数据库操作在View中触发', link: '/refactor/11.2_网络请求或数据库操作直接在View中触发' },
+            { text: '11.3 业务逻辑与视图代码耦合', link: '/refactor/11.3_业务逻辑与视图代码紧密耦合' },
+            { text: '11.4 辅助函数滥用', link: '/refactor/11.4_辅助函数(Helper)滥用' },
+          ]
+        },
+        {
+          text: '第12章 拆分巨型视图',
+          collapsed: false,
+          items: [
+            { text: '12.1 按功能区域拆分为子视图', link: '/refactor/12.1_按功能区域拆分为子视图' },
+            { text: '12.2 提取计算属性视图', link: '/refactor/12.2_按逻辑分组提取计算属性视图' },
+            { text: '12.3 使用私有方法返回some View', link: '/refactor/12.3_使用私有方法返回`some View`' },
+            { text: '12.4 应用前述的组件封装技术', link: '/refactor/12.4_应用前述的组件封装技术' },
+          ]
+        },
+        {
+          text: '第13章 重构状态管理：引入MVVM',
+          collapsed: false,
+          items: [
+            { text: '13.1 创建ViewModel作为ObservableObject', link: '/refactor/13.1_创建`ViewModel`作为`ObservableObject`' },
+            { text: '13.2 将业务逻辑和状态迁移到ViewModel', link: '/refactor/13.2_将业务逻辑和状态从View迁移到ViewModel' },
+            { text: '13.3 在View中使用@StateObject/@ObservedObject', link: '/refactor/13.3_在View中使用`@StateObject`或`@ObservedObject`' },
+            { text: '13.4 使用函数和@Published进行交互', link: '/refactor/13.4_通过函数和`@Published`属性进行交互' },
+          ]
+        },
+        {
+          text: '第14章 优化数据流和依赖',
+          collapsed: false,
+          items: [
+            { text: '14.1 使用@EnvironmentObject共享全局状态', link: '/refactor/14.1_使用`@EnvironmentObject`共享全局状态' },
+            { text: '14.2 将多个@State合并为结构体', link: '/refactor/14.2_将多个`@State`属性合并到单一结构体中' },
+            { text: '14.3 使用Combine处理复杂数据流', link: '/refactor/14.3_利用`Combine`处理复杂的数据流' },
+            { text: '14.4 通过服务层抽象数据获取', link: '/refactor/14.4_通过服务层(Service Layer)抽象数据获取' },
+          ]
+        },
+        {
+          text: '第15章 精炼视图逻辑',
+          collapsed: false,
+          items: [
+            { text: '15.1 将逻辑语句移入ViewModel', link: '/refactor/15.1_将`if-else`或`switch`逻辑移入ViewModel' },
+            { text: '15.2 创建格式化工具', link: '/refactor/15.2_创建专门的格式化工具(Formatter)' },
+            { text: '15.3 为模型添加计算属性', link: '/refactor/15.3_使用`extension`为数据模型添加计算属性' },
+            { text: '15.4 封装重复UI配置到ViewModifier', link: '/refactor/15.4_将重复的UI配置封装到`ViewModifier`中' },
+          ]
+        }
       ]
     },
 
