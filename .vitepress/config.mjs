@@ -1037,8 +1037,10 @@ export default defineConfig({
       ]
     },
 
+    // 社交链接
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
+      { icon: 'github', link: 'https://github.com/wumacms' },
+      { icon: 'bilibili', link: 'https://space.bilibili.com/249603883' }
+    ],
   }
 })
