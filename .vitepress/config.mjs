@@ -52,6 +52,10 @@ export default defineConfig({
             text: 'SwiftUI 动画',
             link: '/animation/'
           },
+          {
+            text: 'SwiftUI 内购',
+            link: '/purchase/'
+          },
         ]
       }
     ],
@@ -889,6 +893,145 @@ export default defineConfig({
             { text: "16.2 在 NSViewRepresentable 中使用 Core Animation", link: "/animation/16.2_在 NSViewRepresentable 中使用 Core Animation" },
             { text: "16.3 通过 Coordinator 同步状态", link: "/animation/16.3_通过 Coordinator 同步状态" },
             { text: "16.4 从 SwiftUI 触发 UIKit 动画", link: "/animation/16.4_从 SwiftUI 触发 UIKit 动画" }
+          ]
+        }
+      ],
+      '/purchase/': [
+        {
+          text: "第1章 App Store Connect配置",
+          collapsible: true,
+          items: [
+            { text: "1.1 创建App记录", link: "/purchase/1.1_创建App记录" },
+            { text: "1.2 配置消耗品", link: "/purchase/1.2_配置App内购买项目：消耗品" },
+            { text: "1.3 配置非消耗品", link: "/purchase/1.3_配置App内购买项目：非消耗品" },
+            { text: "1.4 配置自动续期订阅", link: "/purchase/1.4_配置App内购买项目：自动续期订阅" },
+            { text: "1.5 配置非续期订阅", link: "/purchase/1.5_配置App内购买项目：非续期订阅" },
+            { text: "1.6 设置订阅群组", link: "/purchase/1.6_设置订阅群组" },
+            { text: "1.7 配置沙盒测试员账户", link: "/purchase/1.7_配置沙盒测试员账户" }
+          ]
+        },
+        {
+          text: "第2章 项目环境设置",
+          collapsible: true,
+          items: [
+            { text: "2.1 启用App内购买功能", link: "/purchase/2.1_在Xcode中启用App内购买功能" },
+            { text: "2.2 创建StoreKit配置文件", link: "/purchase/2.2_创建StoreKit配置文件(.storekit)" },
+            { text: "2.3 添加订阅产品", link: "/purchase/2.3_在配置文件中添加订阅产品" },
+            { text: "2.4 配置订阅价格和期限", link: "/purchase/2.4_配置订阅价格和期限" },
+            { text: "2.5 设置不同地区价格", link: "/purchase/2.5_为不同地区设置价格" },
+            { text: "2.6 关联配置文件到运行方案", link: "/purchase/2.6_将StoreKit配置文件关联到运行方案" }
+          ]
+        },
+        {
+          text: "第3章 产品信息获取",
+          collapsible: true,
+          items: [
+            { text: "3.1 异步请求产品信息", link: "/purchase/3.1_异步请求产品信息" },
+            { text: "3.2 处理产品请求错误", link: "/purchase/3.2_处理产品请求错误" },
+            { text: "3.3 解析Product对象数据", link: "/purchase/3.3_解析Product对象数据" },
+            { text: "3.4 显示本地化产品信息", link: "/purchase/3.4_显示本地化的产品标题和描述" },
+            { text: "3.5 格式化并显示价格", link: "/purchase/3.5_格式化并显示价格" }
+          ]
+        },
+        {
+          text: "第4章 处理购买流程",
+          collapsible: true,
+          items: [
+            { text: "4.1 发起购买请求", link: "/purchase/4.1_发起购买请求：purchase()方法" },
+            { text: "4.2 处理购买结果", link: "/purchase/4.2_处理购买结果：PurchaseResult" },
+            { text: "4.3 处理用户取消", link: "/purchase/4.3_处理用户取消购买" },
+            { text: "4.4 处理待处理的交易", link: "/purchase/4.4_处理待处理的交易（Ask to Buy）" },
+            { text: "4.5 处理购买失败", link: "/purchase/4.5_处理购买失败的情况" }
+          ]
+        },
+        {
+          text: "第5章 验证与状态管理",
+          collapsible: true,
+          items: [
+            { text: "5.1 理解Transaction对象", link: "/purchase/5.1_理解Transaction对象" },
+            { text: "5.2 监听交易更新", link: "/purchase/5.2_遍历Transaction.updates以监听交易" },
+            { text: "5.3 验证JWS签名", link: "/purchase/5.3_验证交易的JWS签名" },
+            { text: "5.4 检查订阅权利", link: "/purchase/5.4_检查用户的当前订阅权利" },
+            { text: "5.5 解锁高级功能", link: "/purchase/5.5_解锁高级功能或内容" },
+            { text: "5.6 完成交易", link: "/purchase/5.6_完成交易：Transaction.finish()" },
+            { text: "5.7 处理中断的交易", link: "/purchase/5.7_处理中断的交易" }
+          ]
+        },
+        {
+          text: "第6章 订阅状态与续订",
+          collapsible: true,
+          items: [
+            { text: "6.1 获取已购买产品ID", link: "/purchase/6.1_获取用户所有已购买的产品ID" },
+            { text: "6.2 检查订阅状态", link: "/purchase/6.2_检查订阅是否活跃：currentEntitlements" },
+            { text: "6.3 确定到期日期", link: "/purchase/6.3_确定订阅到期日期" },
+            { text: "6.4 处理续订变更", link: "/purchase/6.4_处理订阅续订、降级和升级" },
+            { text: "6.5 处理过期和宽限期", link: "/purchase/6.5_处理订阅过期和宽限期" },
+            { text: "6.6 处理退款和撤销", link: "/purchase/6.6_处理退款和撤销" }
+          ]
+        },
+        {
+          text: "第7章 订阅页面设计",
+          collapsible: true,
+          items: [
+            { text: "7.1 使用VStack和HStack布局", link: "/purchase/7.1_使用VStack和HStack布局页面" },
+            { text: "7.2 动态展示产品列表", link: "/purchase/7.2_动态展示从StoreKit获取的产品列表" },
+            { text: "7.3 设计购买按钮", link: "/purchase/7.3_设计吸引人的购买按钮" },
+            { text: "7.4 显示条款和隐私政策", link: "/purchase/7.4_显示订阅条款和隐私政策链接" },
+            { text: "7.5 添加恢复购买按钮", link: "/purchase/7.5_添加“恢复购买”按钮" }
+          ]
+        },
+        {
+          text: "第8章 SwiftUI视图与StoreKit集成",
+          collapsible: true,
+          items: [
+            { text: "8.1 创建StoreManager", link: "/purchase/8.1_创建StoreManager作为ObservableObject" },
+            { text: "8.2 使用@StateObject", link: "/purchase/8.2_在视图中使用@StateObject管理StoreManager" },
+            { text: "8.3 动态显示UI元素", link: "/purchase/8.3_根据订阅状态动态显示-隐藏UI元素" },
+            { text: "8.4 调用购买函数", link: "/purchase/8.4_在按钮的action中调用购买函数" },
+            { text: "8.5 显示加载指示器", link: "/purchase/8.5_显示加载指示器和错误提示" }
+          ]
+        },
+        {
+          text: "第9章 恢复购买功能",
+          collapsible: true,
+          items: [
+            { text: "9.1 实现恢复按钮UI", link: "/purchase/9.1_实现“恢复购买”按钮的UI" },
+            { text: "9.2 调用AppStore.sync()", link: "/purchase/9.2_调用AppStore.sync()函数" },
+            { text: "9.3 处理恢复状态更新", link: "/purchase/9.3_处理恢复过程中的状态更新" },
+            { text: "9.4 反馈恢复结果", link: "/purchase/9.4_向用户反馈恢复成功或失败" }
+          ]
+        },
+        {
+          text: "第10章 服务器端验证",
+          collapsible: true,
+          items: [
+            { text: "10.1 服务器验证的必要性", link: "/purchase/10.1_服务器验证的必要性" },
+            { text: "10.2 App Store服务器通知", link: "/purchase/10.2_App Store服务器通知简介" },
+            { text: "10.3 设置通知URL", link: "/purchase/10.3_设置服务器接收通知的URL" },
+            { text: "10.4 解析和验证JWS", link: "/purchase/10.4_在服务器上解析和验证JWS负载" },
+            { text: "10.5 更新用户订阅状态", link: "/purchase/10.5_安全地更新用户数据库中的订阅状态" }
+          ]
+        },
+        {
+          text: "第11章 测试与部署",
+          collapsible: true,
+          items: [
+            { text: "11.1 本地测试", link: "/purchase/11.1_使用StoreKit配置文件进行本地测试" },
+            { text: "11.2 沙盒环境测试", link: "/purchase/11.2_使用沙盒环境进行真机测试" },
+            { text: "11.3 TestFlight测试", link: "/purchase/11.3_TestFlight测试的最佳实践" },
+            { text: "11.4 处理价格变更", link: "/purchase/11.4_处理订阅价格变更" },
+            { text: "11.5 提交应用审核", link: "/purchase/11.5_提交应用以供审核：提供测试信息" }
+          ]
+        },
+        {
+          text: "第12章 促销与优惠代码",
+          collapsible: true,
+          items: [
+            { text: "12.1 配置促销优惠", link: "/purchase/12.1_配置促销优惠（推广和引导）" },
+            { text: "12.2 实现promotionalOffer", link: "/purchase/12.2_实现StoreKit的 promotionalOffer(for-signature-)" },
+            { text: "12.3 生成验证优惠签名", link: "/purchase/12.3_生成并验证优惠签名" },
+            { text: "12.4 配置优惠代码", link: "/purchase/12.4_配置和兑换优惠代码" },
+            { text: "12.5 展示促销价格", link: "/purchase/12.5_在UI中展示促销价格" }
           ]
         }
       ]
