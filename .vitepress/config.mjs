@@ -48,6 +48,10 @@ export default defineConfig({
             text: 'SwiftUI 重构',
             link: '/refactor/'
           },
+          {
+            text: 'SwiftUI 动画',
+            link: '/animation/'
+          },
         ]
       }
     ],
@@ -710,6 +714,181 @@ export default defineConfig({
             { text: '15.2 创建格式化工具', link: '/refactor/15.2_创建专门的格式化工具(Formatter)' },
             { text: '15.3 为模型添加计算属性', link: '/refactor/15.3_使用`extension`为数据模型添加计算属性' },
             { text: '15.4 封装重复UI配置到ViewModifier', link: '/refactor/15.4_将重复的UI配置封装到`ViewModifier`中' },
+          ]
+        }
+      ],
+      '/animation/': [
+        {
+          text: "第1章 隐式动画",
+          collapsible: true,
+          items: [
+            { text: "1.1 使用 .animation() 修饰符", link: "/animation/1.1_使用 .animation() 修饰符" },
+            { text: "1.2 配置动画曲线", link: "/animation/1.2_配置动画曲线- .easeInOut, .linear, .spring" },
+            { text: "1.3 设置动画时长", link: "/animation/1.3_设置动画时长- duration参数" },
+            { text: "1.4 应用 .animation() 到容器视图", link: "/animation/1.4_应用 .animation() 到容器视图" },
+            { text: "1.5 使用 .animation(nil) 禁用动画", link: "/animation/1.5_使用 .animation(nil) 禁用动画" }
+          ]
+        },
+        {
+          text: "第2章 显式动画",
+          collapsible: true,
+          items: [
+            { text: "2.1 使用 withAnimation 代码块", link: "/animation/2.1_使用 withAnimation 代码块" },
+            { text: "2.2 在 withAnimation 中改变状态", link: "/animation/2.2_在 withAnimation 中改变状态" },
+            { text: "2.3 为 withAnimation 指定动画曲线和时长", link: "/animation/2.3_为 withAnimation 指定动画曲线和时长" },
+            { text: "2.4 嵌套 withAnimation 代码块", link: "/animation/2.4_嵌套 withAnimation 代码块" },
+            { text: "2.5 显式动画与隐式动画的交互", link: "/animation/2.5_显式动画与隐式动画的交互" }
+          ]
+        },
+        {
+          text: "第3章 动画与状态绑定",
+          collapsible: true,
+          items: [
+            { text: "3.1 使用 $binding.animation()", link: "/animation/3.1_使用 $binding.animation()" },
+            { text: "3.2 为 Toggle、Slider 等控件添加动画", link: "/animation/3.2_为 Toggle、Slider 等控件添加动画" },
+            { text: "3.3 绑定动画的特定参数配置", link: "/animation/3.3_绑定动画的特定参数配置" },
+            { text: "3.4 理解绑定动画的执行时机", link: "/animation/3.4_理解绑定动画的执行时机" }
+          ]
+        },
+        {
+          text: "第4章 转场（Transitions）",
+          collapsible: true,
+          items: [
+            { text: "4.1 使用 .transition() 修饰符", link: "/animation/4.1_使用 .transition() 修饰符" },
+            { text: "4.2 内置转场效果", link: "/animation/4.2_内置转场效果- .opacity, .slide, .scale" },
+            { text: "4.3 组合多个转场效果", link: "/animation/4.3_组合多个转场效果" },
+            { text: "4.4 使用 .asymmetric 创建非对称转场", link: "/animation/4.4_使用 .asymmetric 创建非对称转场" },
+            { text: "4.5 根据状态切换视图并触发转场", link: "/animation/4.5_根据状态切换视图并触发转场" }
+          ]
+        },
+        {
+          text: "第5章 Animatable 协议与 VectorArithmetic",
+          collapsible: true,
+          items: [
+            { text: "5.1 理解 Animatable 协议", link: "/animation/5.1_理解 Animatable 协议" },
+            { text: "5.2 实现 animatableData 计算属性", link: "/animation/5.2_实现 animatableData 计算属性" },
+            { text: "5.3 使用 VectorArithmetic 协议", link: "/animation/5.3_使用 VectorArithmetic 协议" },
+            { text: "5.4 为自定义数据类型添加动画能力", link: "/animation/5.4_为自定义数据类型添加动画能力" },
+            { text: "5.5 动画化非数值属性 (例如颜色)", link: "/animation/5.5_动画化非数值属性 (例如颜色)" }
+          ]
+        },
+        {
+          text: "第6章 GeometryEffect",
+          collapsible: true,
+          items: [
+            { text: "6.1 GeometryEffect 协议基础", link: "/animation/6.1_GeometryEffect 协议基础" },
+            { text: "6.2 实现 effectValue(size-) 方法", link: "/animation/6.2_实现 effectValue(size-) 方法" },
+            { text: "6.3 创建自定义视图变换动画", link: "/animation/6.3_创建自定义视图变换动画" },
+            { text: "6.4 SkewEffect- 实现倾斜效果", link: "/animation/6.4_SkewEffect- 实现倾斜效果" },
+            { text: "6.5 FollowPathEffect- 实现路径跟随动画", link: "/animation/6.5_FollowPathEffect- 实现路径跟随动画" }
+          ]
+        },
+        {
+          text: "第7章 内置动画曲线",
+          collapsible: true,
+          items: [
+            { text: "7.1 线性动画 .linear", link: "/animation/7.1_线性动画 .linear" },
+            { text: "7.2 缓入缓出 .easeInOut", link: "/animation/7.2_缓入缓出 .easeInOut" },
+            { text: "7.3 缓入 .easeIn 与 缓出 .easeOut", link: "/animation/7.3_缓入 .easeIn 与 缓出 .easeOut" },
+            { text: "7.4 自定义缓动曲线 timingCurve", link: "/animation/7.4_自定义缓动曲线 timingCurve" }
+          ]
+        },
+        {
+          text: "第8章 弹簧动画（Spring）",
+          collapsible: true,
+          items: [
+            { text: "8.1 基础弹簧动画 .spring()", link: "/animation/8.1_基础弹簧动画 .spring()" },
+            { text: "8.2 交互式弹簧 .interactiveSpring()", link: "/animation/8.2_交互式弹簧 .interactiveSpring()" },
+            { text: "8.3 配置弹簧参数- response, dampingFraction", link: "/animation/8.3_配置弹簧参数- response, dampingFraction" },
+            { text: "8.4 配置弹簧参数- blendDuration", link: "/animation/8.4_配置弹簧参数- blendDuration" },
+            { text: "8.5 创建果冻效果", link: "/animation/8.5_创建果冻效果" }
+          ]
+        },
+        {
+          text: "第9章 相位动画师（Phase Animator）",
+          collapsible: true,
+          items: [
+            { text: "9.1 PhaseAnimator 视图基础", link: "/animation/9.1_PhaseAnimator 视图基础" },
+            { text: "9.2 定义动画阶段（Phases）", link: "/animation/9.2_定义动画阶段（Phases）" },
+            { text: "9.3 在 content 闭包中应用视图修饰符", link: "/animation/9.3_在 content 闭包中应用视图修饰符" },
+            { text: "9.4 在 animation 闭包中配置动画", link: "/animation/9.4_在 animation 闭包中配置动画" },
+            { text: "9.5 通过 trigger 触发相位动画", link: "/animation/9.5_通过 trigger 触发相位动画" }
+          ]
+        },
+        {
+          text: "第10章 关键帧动画（Keyframe Animator）",
+          collapsible: true,
+          items: [
+            { text: "10.1 KeyframeAnimator 视图基础", link: "/animation/10.1_KeyframeAnimator 视图基础" },
+            { text: "10.2 定义关键帧轨道 KeyframeTrack", link: "/animation/10.2_定义关键帧轨道 KeyframeTrack" },
+            { text: "10.3 使用 LinearKeyframe", link: "/animation/10.3_使用 LinearKeyframe" },
+            { text: "10.4 使用 SpringKeyframe", link: "/animation/10.4_使用 SpringKeyframe" },
+            { text: "10.5 使用 CubicKeyframe", link: "/animation/10.5_使用 CubicKeyframe" }
+          ]
+        },
+        {
+          text: "第11章 形状（Shape）动画",
+          collapsible: true,
+          items: [
+            { text: "11.1 动画化路径 Path", link: "/animation/11.1_动画化路径 Path" },
+            { text: "11.2 使用 animatableData 动画化自定义形状", link: "/animation/11.2_使用 animatableData 动画化自定义形状" },
+            { text: "11.3 Trim 修剪动画", link: "/animation/11.3_Trim 修剪动画- strokeStart, strokeEnd" },
+            { text: "11.4 实现路径绘制动画效果", link: "/animation/11.4_实现路径绘制动画效果" },
+            { text: "11.5 形状变形动画", link: "/animation/11.5_形状变形动画" }
+          ]
+        },
+        {
+          text: "第12章 MatchedGeometryEffect",
+          collapsible: true,
+          items: [
+            { text: "12.1 MatchedGeometryEffect 概念与应用", link: "/animation/12.1_MatchedGeometryEffect 概念与应用" },
+            { text: "12.2 定义命名空间 @Namespace", link: "/animation/12.2_定义命名空间 @Namespace" },
+            { text: "12.3 在不同视图间同步几何属性", link: "/animation/12.3_在不同视图间同步几何属性" },
+            { text: "12.4 实现“魔法移动”效果", link: "/animation/12.4_实现“魔法移动”效果" },
+            { text: "12.5 处理源视图和目标视图的切换", link: "/animation/12.5_处理源视图和目标视图的切换" }
+          ]
+        },
+        {
+          text: "第13章 Canvas 与 TimelineView",
+          collapsible: true,
+          items: [
+            { text: "13.1 使用 TimelineView 创建定时更新", link: "/animation/13.1_使用 TimelineView 创建定时更新" },
+            { text: "13.2 TimelineView 的 schedule 参数", link: "/animation/13.2_TimelineView 的 schedule 参数" },
+            { text: "13.3 在 Canvas 中绘制动态图形", link: "/animation/13.3_在 Canvas 中绘制动态图形" },
+            { text: "13.4 结合 TimelineView 和 Canvas 实现复杂动画", link: "/animation/13.4_结合 TimelineView 和 Canvas 实现复杂动画" },
+            { text: "13.5 动画化 Canvas 中的符号 (Symbols)", link: "/animation/13.5_动画化 Canvas 中的符号 (Symbols)" }
+          ]
+        },
+        {
+          text: "第14章 常见动画案例",
+          collapsible: true,
+          items: [
+            { text: "14.1 实现加载指示器动画", link: "/animation/14.1_实现加载指示器动画" },
+            { text: "14.2 创建卡片翻转效果", link: "/animation/14.2_创建卡片翻转效果" },
+            { text: "14.3 构建视差滚动效果", link: "/animation/14.3_构建视差滚动效果" },
+            { text: "14.4 制作可交互的拖拽动画", link: "/animation/14.4_制作可交互的拖拽动画" },
+            { text: "14.5 实现心跳动画效果", link: "/animation/14.5_实现心跳动画效果" }
+          ]
+        },
+        {
+          text: "第15章 性能考量与调试",
+          collapsible: true,
+          items: [
+            { text: "15.1 识别导致性能问题的动画", link: "/animation/15.1_识别导致性能问题的动画" },
+            { text: "15.2 使用 Instruments 分析动画性能", link: "/animation/15.2_使用 Instruments 分析动画性能" },
+            { text: "15.3 最小化视图重绘范围", link: "/animation/15.3_最小化视图重绘范围" },
+            { text: "15.4 将动画计算移出主线程", link: "/animation/15.4_将动画计算移出主线程" },
+            { text: "15.5 利用 .drawingGroup() 优化渲染", link: "/animation/15.5_利用 .drawingGroup() 优化渲染" }
+          ]
+        },
+        {
+          text: "第16章 与UIKit/AppKit动画集成",
+          collapsible: true,
+          items: [
+            { text: "16.1 在 UIViewRepresentable 中使用 UIView 动画", link: "/animation/16.1_在 UIViewRepresentable 中使用 UIView 动画" },
+            { text: "16.2 在 NSViewRepresentable 中使用 Core Animation", link: "/animation/16.2_在 NSViewRepresentable 中使用 Core Animation" },
+            { text: "16.3 通过 Coordinator 同步状态", link: "/animation/16.3_通过 Coordinator 同步状态" },
+            { text: "16.4 从 SwiftUI 触发 UIKit 动画", link: "/animation/16.4_从 SwiftUI 触发 UIKit 动画" }
           ]
         }
       ]
