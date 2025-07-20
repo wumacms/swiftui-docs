@@ -60,6 +60,10 @@ export default defineConfig({
             text: 'SwiftUI 思想',
             link: '/thinking/'
           },
+          {
+            text: 'SwiftUI 网格',
+            link: '/grid/'
+          },
         ]
       }
     ],
@@ -1170,6 +1174,124 @@ export default defineConfig({
             { text: "13.2 UIViewControllerRepresentable", link: "/thinking/13.2_UIViewControllerRepresentable协议" },
             { text: "13.3 NSViewRepresentable", link: "/thinking/13.3_NSViewRepresentable协议" },
             { text: "13.4 嵌入UIKit/AppKit组件", link: "/thinking/13.4_在SwiftUI中嵌入UIKit-AppKit组件" }
+          ]
+        }
+      ],
+      '/grid/': [
+        {
+          text: "第1章 LazyVGrid：垂直网格布局入门",
+          collapsible: true,
+          items: [
+            { text: "1.1 创建基本的LazyVGrid", link: "/grid/1.1_创建基本的LazyVGrid" },
+            { text: "1.2 理解ScrollView的必要性", link: "/grid/1.2_理解ScrollView的必要性" },
+            { text: "1.3 配置GridItem定义列", link: "/grid/1.3_配置GridItem以定义列" },
+            { text: "1.4 使用.fixed()固定宽度列", link: "/grid/1.4_使用.fixed()创建固定宽度的列" },
+            { text: "1.5 使用.flexible()灵活宽度列", link: "/grid/1.5_使用.flexible()创建灵活宽度的列" },
+            { text: "1.6 使用.adaptive()自适应列", link: "/grid/1.6_使用.adaptive()创建自适应宽度的列" }
+          ]
+        },
+        {
+          text: "第2章 LazyHGrid：水平网格布局入门",
+          collapsible: true,
+          items: [
+            { text: "2.1 创建基本的LazyHGrid", link: "/grid/2.1_创建基本的LazyHGrid" },
+            { text: "2.2 在水平ScrollView中嵌入", link: "/grid/2.2_在水平ScrollView中嵌入LazyHGrid" },
+            { text: "2.3 配置GridItem定义行", link: "/grid/2.3_配置GridItem以定义行" },
+            { text: "2.4 使用.fixed()固定高度行", link: "/grid/2.4_使用.fixed()创建固定高度的行" },
+            { text: "2.5 使用.flexible()灵活高度行", link: "/grid/2.5_使用.flexible()创建灵活高度的行" },
+            { text: "2.6 使用.adaptive()自适应行", link: "/grid/2.6_使用.adaptive()创建自适应高度的行" }
+          ]
+        },
+        {
+          text: "第3章 通用配置与修饰符",
+          collapsible: true,
+          items: [
+            { text: "3.1 设置网格对齐方式", link: "/grid/3.1_设置网格的整体对齐方式 (alignment)" },
+            { text: "3.2 调整网格项间距", link: "/grid/3.2_调整网格项之间的间距 (spacing)" },
+            { text: "3.3 使用PinnedViews固定页眉页脚", link: "/grid/3.3_使用PinnedViews固定页眉和页脚" },
+            { text: "3.4 为网格项添加内边距", link: "/grid/3.4_为网格项添加内边距 (padding)" }
+          ]
+        },
+        {
+          text: "第4章 GridItem 高级配置",
+          collapsible: true,
+          items: [
+            { text: "4.1 混合使用三种尺寸类型", link: "/grid/4.1_混合使用fixed, flexible, 和 adaptive" },
+            { text: "4.2 设置自定义间距", link: "/grid/4.2_为GridItem设置自定义间距" },
+            { text: "4.3 设置对齐方式", link: "/grid/4.3_为GridItem设置对齐方式" },
+            { text: "4.4 动态生成GridItem数组", link: "/grid/4.4_动态生成GridItem数组" },
+            { text: "4.5 响应设备方向变化", link: "/grid/4.5_响应设备方向变化调整列数" }
+          ]
+        },
+        {
+          text: "第5章 数据驱动的网格布局",
+          collapsible: true,
+          items: [
+            { text: "5.1 使用ForEach处理数据", link: "/grid/5.1_使用ForEach处理动态数据集合" },
+            { text: "5.2 实现Identifiable协议", link: "/grid/5.2_为网格项实现Identifiable协议" },
+            { text: "5.3 使用UUID或自定义ID", link: "/grid/5.3_使用UUID或自定义ID作为唯一标识" },
+            { text: "5.4 处理可选数据", link: "/grid/5.4_在网格中处理可选数据" }
+          ]
+        },
+        {
+          text: "第6章 带区段的网格布局",
+          collapsible: true,
+          items: [
+            { text: "6.1 使用Section组织内容", link: "/grid/6.1_在LazyVGrid-LazyHGrid中使用Section" },
+            { text: "6.2 添加自定义页眉", link: "/grid/6.2_为每个Section添加自定义页眉 (Header)" },
+            { text: "6.3 添加自定义页脚", link: "/grid/6.3_为每个Section添加自定义页脚 (Footer)" },
+            { text: "6.4 实现可折叠Section", link: "/grid/6.4_实现可折叠的Section" }
+          ]
+        },
+        {
+          text: "第7章 Grid 视图基础",
+          collapsible: true,
+          items: [
+            { text: "7.1 Grid与Lazy Grid的区别", link: "/grid/7.1_Grid与LazyVGrid-LazyHGrid的区别" },
+            { text: "7.2 创建基本Grid视图", link: "/grid/7.2_创建基本的Grid视图" },
+            { text: "7.3 使用GridRow组织行", link: "/grid/7.3_使用GridRow组织行内容" },
+            { text: "7.4 在GridRow中放置视图", link: "/grid/7.4_在GridRow中放置视图" }
+          ]
+        },
+        {
+          text: "第8章 控制单元格尺寸与位置",
+          collapsible: true,
+          items: [
+            { text: "8.1 使用.gridCellColumns()跨列", link: "/grid/8.1_使用.gridCellColumns()实现跨列" },
+            { text: "8.2 使用.gridCellAnchor()对齐", link: "/grid/8.2_使用.gridCellAnchor()设置单元格内对齐" },
+            { text: "8.3 设置整列对齐", link: "/grid/8.3_使用.gridColumnAlignment()设置整列对齐" },
+            { text: "8.4 控制行内对齐", link: "/grid/8.4_使用GridRow的alignment参数控制行内对齐" }
+          ]
+        },
+        {
+          text: "第9章 高级Grid布局",
+          collapsible: true,
+          items: [
+            { text: "9.1 使用Spacer创建空单元格", link: "/grid/9.1_使用Spacer在Grid中创建空单元格" },
+            { text: "9.2 忽略单元格尺寸计算", link: "/grid/9.2_使用.gridCellUnsizedAxes()忽略单元格尺寸计算" },
+            { text: "9.3 嵌套Grid实现复杂布局", link: "/grid/9.3_嵌套Grid实现复杂布局" },
+            { text: "9.4 动态构建GridRow", link: "/grid/9.4_动态构建GridRow和视图" }
+          ]
+        },
+        {
+          text: "第10章 构建常见UI模式",
+          collapsible: true,
+          items: [
+            { text: "10.1 创建照片画廊", link: "/grid/10.1_实战：创建一个照片画廊 (LazyVGrid)" },
+            { text: "10.2 创建类似App Store分类列表", link: "/grid/10.2_实战：创建一个类似App Store的分类列表 (LazyHGrid)" },
+            { text: "10.3 创建复杂设置界面", link: "/grid/10.3_实战：创建一个复杂的设置界面 (Grid)" },
+            { text: "10.4 创建日历视图", link: "/grid/10.4_实战：创建一个日历视图 (LazyVGrid)" }
+          ]
+        },
+        {
+          text: "第11章 性能优化策略",
+          collapsible: true,
+          items: [
+            { text: "11.1 理解'Lazy'的性能优势", link: "/grid/11.1_理解“Lazy”的含义和性能优势" },
+            { text: "11.2 避免昂贵计算", link: "/grid/11.2_避免在网格项视图中进行昂贵的计算" },
+            { text: "11.3 优化数据加载", link: "/grid/11.3_优化数据加载以配合懒加载网格" },
+            { text: "11.4 使用.drawingGroup()优化渲染", link: "/grid/11.4_使用.drawingGroup()优化复杂视图渲染" },
+            { text: "11.5 选择Grid或Lazy Grid", link: "/grid/11.5_何时选择Grid而非Lazy Grid" }
           ]
         }
       ]
