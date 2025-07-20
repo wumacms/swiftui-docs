@@ -56,6 +56,10 @@ export default defineConfig({
             text: 'SwiftUI 内购',
             link: '/purchase/'
           },
+          {
+            text: 'SwiftUI 思想',
+            link: '/thinking/'
+          },
         ]
       }
     ],
@@ -1032,6 +1036,140 @@ export default defineConfig({
             { text: "12.3 生成验证优惠签名", link: "/purchase/12.3_生成并验证优惠签名" },
             { text: "12.4 配置优惠代码", link: "/purchase/12.4_配置和兑换优惠代码" },
             { text: "12.5 展示促销价格", link: "/purchase/12.5_在UI中展示促销价格" }
+          ]
+        }
+      ],
+      '/thinking/': [
+        {
+          text: "第1章 声明式语法基础",
+          collapsible: true,
+          items: [
+            { text: "1.1 描述'什么'而非'如何'", link: "/thinking/1.1_描述“什么”而非“如何”" },
+            { text: "1.2 与命令式UI（UIKit）对比", link: "/thinking/1.2_与命令式UI（UIKit）的对比" },
+            { text: "1.3 代码可读性与简洁性优势", link: "/thinking/1.3_代码可读性与简洁性优势" },
+            { text: "1.4 UI即状态的函数", link: "/thinking/1.4_UI即状态的函数" }
+          ]
+        },
+        {
+          text: "第2章 视图作为值类型",
+          collapsible: true,
+          items: [
+            { text: "2.1 视图是轻量级结构体", link: "/thinking/2.1_视图是轻量级结构体（Struct）" },
+            { text: "2.2 视图创建与销毁成本", link: "/thinking/2.2_视图的创建与销毁成本低" },
+            { text: "2.3 避免复杂视图层级", link: "/thinking/2.3_避免复杂的视图层级和引用循环" },
+            { text: "2.4 值语义对UI一致性的保障", link: "/thinking/2.4_值语义对UI一致性的保障" }
+          ]
+        },
+        {
+          text: "第3章 单一数据源",
+          collapsible: true,
+          items: [
+            { text: "3.1 数据驱动UI更新", link: "/thinking/3.1_数据是驱动UI更新的唯一来源" },
+            { text: "3.2 避免状态不一致问题", link: "/thinking/3.2_避免UI状态不一致问题" },
+            { text: "3.3 简化状态管理逻辑", link: "/thinking/3.3_简化状态管理逻辑" },
+            { text: "3.4 数据流单向性原则", link: "/thinking/3.4_数据流的单向性原则" }
+          ]
+        },
+        {
+          text: "第4章 状态管理属性包装器",
+          collapsible: true,
+          items: [
+            { text: "4.1 @State：本地值类型状态", link: "/thinking/4.1_@State：管理本地简单值类型状态" },
+            { text: "4.2 @Binding：双向数据绑定", link: "/thinking/4.2_@Binding：创建双向数据绑定" },
+            { text: "4.3 @StateObject：引用类型生命周期", link: "/thinking/4.3_@StateObject：管理引用类型对象的生命周期" },
+            { text: "4.4 @ObservedObject：订阅外部对象", link: "/thinking/4.4_@ObservedObject：订阅外部对象的更新" },
+            { text: "4.5 @EnvironmentObject：数据共享", link: "/thinking/4.5_@EnvironmentObject：在视图层级中共享数据" },
+            { text: "4.6 @Environment：系统环境值", link: "/thinking/4.6_@Environment：读取系统环境值" }
+          ]
+        },
+        {
+          text: "第5章 UI自动更新机制",
+          collapsible: true,
+          items: [
+            { text: "5.1 状态变化触发视图重绘", link: "/thinking/5.1_状态变化如何触发视图重绘" },
+            { text: "5.2 视图依赖关系图构建", link: "/thinking/5.2_视图依赖关系图的构建" },
+            { text: "5.3 最小化视图更新策略", link: "/thinking/5.3_最小化视图更新范围的策略" },
+            { text: "5.4 数据流可预测性", link: "/thinking/5.4_数据流的可预测性" }
+          ]
+        },
+        {
+          text: "第6章 组合优于继承",
+          collapsible: true,
+          items: [
+            { text: "6.1 通过组合构建复杂界面", link: "/thinking/6.1_通过组合小视图构建复杂界面" },
+            { text: "6.2 视图可复用性设计", link: "/thinking/6.2_视图的可复用性设计" },
+            { text: "6.3 避免深度继承复杂性", link: "/thinking/6.3_避免深度继承带来的复杂性" },
+            { text: "6.4 函数式构建UI实践", link: "/thinking/6.4_函数式构建UI的实践" }
+          ]
+        },
+        {
+          text: "第7章 修饰符（Modifiers）设计",
+          collapsible: true,
+          items: [
+            { text: "7.1 修饰符返回新视图", link: "/thinking/7.1_修饰符返回一个新的视图" },
+            { text: "7.2 链式调用实现原理", link: "/thinking/7.2_链式调用的实现原理" },
+            { text: "7.3 修饰符顺序重要性", link: "/thinking/7.3_修饰符的顺序重要性" },
+            { text: "7.4 创建自定义修饰符", link: "/thinking/7.4_自定义修饰符的创建与使用" }
+          ]
+        },
+        {
+          text: "第8章 布局系统设计",
+          collapsible: true,
+          items: [
+            { text: "8.1 容器视图（Stacks）", link: "/thinking/8.1_容器视图（HStack, VStack, ZStack）" },
+            { text: "8.2 自适应布局与优先级", link: "/thinking/8.2_自适应布局与优先级" },
+            { text: "8.3 GeometryReader使用", link: "/thinking/8.3_GeometryReader：获取父视图几何信息" },
+            { text: "8.4 布局中立性与跨平台", link: "/thinking/8.4_布局中立性与跨平台适应" }
+          ]
+        },
+        {
+          text: "第9章 视图身份（Identity）",
+          collapsible: true,
+          items: [
+            { text: "9.1 显式身份：id()修饰符", link: "/thinking/9.1_显式身份：id()修饰符的作用" },
+            { text: "9.2 结构性身份", link: "/thinking/9.2_结构性身份：基于视图在层级中的位置" },
+            { text: "9.3 身份对动画的影响", link: "/thinking/9.3_身份对动画和过渡的影响" },
+            { text: "9.4 ForEach中的身份", link: "/thinking/9.4_ForEach中身份的重要性" }
+          ]
+        },
+        {
+          text: "第10章 性能优化设计",
+          collapsible: true,
+          items: [
+            { text: "10.1 视图差异比较算法", link: "/thinking/10.1_视图差异比较（Diffing）算法" },
+            { text: "10.2 懒加载容器", link: "/thinking/10.2_懒加载容器（Lazy Stacks & Grids）" },
+            { text: "10.3 减少不必要重绘", link: "/thinking/10.3_减少不必要的视图重绘" },
+            { text: "10.4 移出计算密集型任务", link: "/thinking/10.4_将计算密集型任务移出视图主体" }
+          ]
+        },
+        {
+          text: "第11章 生命周期管理",
+          collapsible: true,
+          items: [
+            { text: "11.1 视图与状态生命周期", link: "/thinking/11.1_视图生命周期与状态生命周期的区别" },
+            { text: "11.2 onAppear和onDisappear", link: "/thinking/11.2_onAppear和onDisappear修饰符" },
+            { text: "11.3 @StateObject生命周期", link: "/thinking/11.3_@StateObject的生命周期管理" },
+            { text: "11.4 Task修饰符与异步", link: "/thinking/11.4_任务（Task）修饰符与异步操作" }
+          ]
+        },
+        {
+          text: "第12章 抽象与适配",
+          collapsible: true,
+          items: [
+            { text: "12.1 多平台代码", link: "/thinking/12.1_一套代码，多平台运行" },
+            { text: "12.2 平台控件抽象化", link: "/thinking/12.2_平台特定控件的抽象化" },
+            { text: "12.3 平台条件编译", link: "/thinking/12.3_使用if os()进行平台条件编译" },
+            { text: "12.4 控件自适应行为", link: "/thinking/12.4_控件的自适应行为" }
+          ]
+        },
+        {
+          text: "第13章 与原生框架互操作性",
+          collapsible: true,
+          items: [
+            { text: "13.1 UIViewRepresentable", link: "/thinking/13.1_UIViewRepresentable协议" },
+            { text: "13.2 UIViewControllerRepresentable", link: "/thinking/13.2_UIViewControllerRepresentable协议" },
+            { text: "13.3 NSViewRepresentable", link: "/thinking/13.3_NSViewRepresentable协议" },
+            { text: "13.4 嵌入UIKit/AppKit组件", link: "/thinking/13.4_在SwiftUI中嵌入UIKit-AppKit组件" }
           ]
         }
       ]
