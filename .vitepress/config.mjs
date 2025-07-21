@@ -64,6 +64,10 @@ export default defineConfig({
             text: 'SwiftUI 网格',
             link: '/grid/'
           },
+          {
+            text: 'SwiftUI 高阶',
+            link: '/advanced/'
+          },
         ]
       }
     ],
@@ -1292,6 +1296,155 @@ export default defineConfig({
             { text: "11.3 优化数据加载", link: "/grid/11.3_优化数据加载以配合懒加载网格" },
             { text: "11.4 使用.drawingGroup()优化渲染", link: "/grid/11.4_使用.drawingGroup()优化复杂视图渲染" },
             { text: "11.5 选择Grid或Lazy Grid", link: "/grid/11.5_何时选择Grid而非Lazy Grid" }
+          ]
+        }
+      ],
+      '/advanced/': [
+        {
+          text: "第1章 GeometryReader 深度解析",
+          collapsible: true,
+          items: [
+            { text: "1.1 工作原理", link: "/advanced/1.1_理解 GeometryReader 的工作原理" },
+            { text: "1.2 获取视图尺寸和位置", link: "/advanced/1.2_获取视图的尺寸和位置" },
+            { text: "1.3 处理不同坐标空间", link: "/advanced/1.3_处理不同坐标空间 (local, global, named)" },
+            { text: "1.4 性能陷阱与优化", link: "/advanced/1.4_GeometryReader 的性能陷阱与优化" },
+            { text: "1.5 创建响应式布局", link: "/advanced/1.5_创建响应式和自适应布局" },
+            { text: "1.6 实现滚动视差效果", link: "/advanced/1.6_实现滚动视差效果" }
+          ]
+        },
+        {
+          text: "第2章 PreferenceKey 实现逆向数据流",
+          collapsible: true,
+          items: [
+            { text: "2.1 定义自定义 PreferenceKey", link: "/advanced/2.1_定义自定义 PreferenceKey" },
+            { text: "2.2 使用 .preference()", link: "/advanced/2.2_使用 .preference(key-value-) 设置值" },
+            { text: "2.3 监听变化", link: "/advanced/2.3_使用 .onPreferenceChange() 监听变化" },
+            { text: "2.4 读取 Preference 值", link: "/advanced/2.4_使用 .background() 读取 Preference 值" },
+            { text: "2.5 同步子视图尺寸", link: "/advanced/2.5_通过 PreferenceKey 同步子视图尺寸" },
+            { text: "2.6 动态导航栏标题", link: "/advanced/2.6_实现动态导航栏标题效果" }
+          ]
+        },
+        {
+          text: "第3章 自定义布局协议",
+          collapsible: true,
+          items: [
+            { text: "3.1 Layout 协议核心方法", link: "/advanced/3.1_理解 Layout 协议的核心方法" },
+            { text: "3.2 计算容器大小", link: "/advanced/3.2_实现 sizeThatFits 方法计算容器大小" },
+            { text: "3.3 放置子视图", link: "/advanced/3.3_实现 placeSubviews 方法放置子视图" },
+            { text: "3.4 创建流式布局", link: "/advanced/3.4_创建自定义流式布局 (Flow Layout)" },
+            { text: "3.5 创建径向布局", link: "/advanced/3.5_创建自定义径向布局 (Radial Layout)" },
+            { text: "3.6 管理布局缓存", link: "/advanced/3.6_管理布局缓存以提高性能" },
+            { text: "3.7 添加布局动画", link: "/advanced/3.7_为自定义布局添加动画" }
+          ]
+        },
+        {
+          text: "第4章 视图对齐与锚点",
+          collapsible: true,
+          items: [
+            { text: "4.1 Anchor-Value-概念", link: "/advanced/4.1_理解 `Anchor<Value>` 的概念" },
+            { text: "4.2 传递锚点", link: "/advanced/4.2_使用 .anchorPreference 传递锚点" },
+            { text: "4.3 读取锚点信息", link: "/advanced/4.3_使用 GeometryReader 读取锚点信息" },
+            { text: "4.4 创建精确对齐线", link: "/advanced/4.4_在不同视图间创建精确对齐线" },
+            { text: "4.5 实现复杂视图连接", link: "/advanced/4.5_实现复杂的视图连接效果" }
+          ]
+        },
+        {
+          text: "第5章 @StateObject 与 @ObservedObject",
+          collapsible: true,
+          items: [
+            { text: "5.1 生命周期对比", link: "/advanced/5.1_辨析 @StateObject 和 @ObservedObject 的生命周期" },
+            { text: "5.2 场景分析", link: "/advanced/5.2_选择正确包装器的场景分析" },
+            { text: "5.3 常见陷阱", link: "/advanced/5.3_避免 @ObservedObject 的常见陷阱" },
+            { text: "5.4 依赖注入", link: "/advanced/5.4_在依赖注入中使用 @StateObject" }
+          ]
+        },
+        {
+          text: "第6章 环境值与环境对象",
+          collapsible: true,
+          items: [
+            { text: "6.1 使用 @EnvironmentObject", link: "/advanced/6.1_使用 @EnvironmentObject 注入依赖" },
+            { text: "6.2 自定义 EnvironmentKey", link: "/advanced/6.2_自定义 EnvironmentKey 与 EnvironmentValues" },
+            { text: "6.3 共享数据模型", link: "/advanced/6.3_在整个应用中共享数据模型" },
+            { text: "6.4 读取系统环境值", link: "/advanced/6.4_读取系统环境值 (如颜色方案、尺寸类别)" },
+            { text: "6.5 视图预览配合", link: "/advanced/6.5_环境值与视图预览的配合使用" }
+          ]
+        },
+        {
+          text: "第7章 Observation 框架",
+          collapsible: true,
+          items: [
+            { text: "7.1 使用 @Observable", link: "/advanced/7.1_使用 @Observable 宏简化模型" },
+            { text: "7.2 自动跟踪机制", link: "/advanced/7.2_理解 Observation 框架的自动跟踪机制" },
+            { text: "7.3 从 ObservableObject 迁移", link: "/advanced/7.3_从 ObservableObject 迁移到 @Observable" },
+            { text: "7.4 使用 @Bindable", link: "/advanced/7.4_@Bindable 的使用与双向绑定" },
+            { text: "7.5 性能优势", link: "/advanced/7.5_Observation 框架的性能优势" }
+          ]
+        },
+        {
+          text: "第8章 管理持久化数据",
+          collapsible: true,
+          items: [
+            { text: "8.1 使用 @AppStorage", link: "/advanced/8.1_使用 @AppStorage 进行轻量数据持久化" },
+            { text: "8.2 集成 Core Data", link: "/advanced/8.2_集成 Core Data 与 SwiftUI" },
+            { text: "8.3 使用 SwiftData", link: "/advanced/8.3_使用 SwiftData 进行现代数据持久化 (iOS 17+)" },
+            { text: "8.4 使用 @Query", link: "/advanced/8.4_@Query 宏的使用与配置" },
+            { text: "8.5 处理增删改查", link: "/advanced/8.5_在 SwiftUI 视图中处理 SwiftData 的增删改查" }
+          ]
+        },
+        {
+          text: "第9章 自定义视图与修改器",
+          collapsible: true,
+          items: [
+            { text: "9.1 创建自定义视图组件", link: "/advanced/9.1_创建可复用的自定义视图组件" },
+            { text: "9.2 封装 ViewModifier", link: "/advanced/9.2_封装行为与样式到自定义 ViewModifier" },
+            { text: "9.3 扩展 View API", link: "/advanced/9.3_通过扩展 View 提供简洁的 API" },
+            { text: "9.4 .modifier() 对比", link: "/advanced/9.4_理解 .modifier() 和直接调用的区别" },
+            { text: "9.5 带参数修改器", link: "/advanced/9.5_实现带参数的视图修改器" }
+          ]
+        },
+        {
+          text: "第10章 SwiftUI 性能分析与调试",
+          collapsible: true,
+          items: [
+            { text: "10.1 使用 Instruments", link: "/advanced/10.1_使用 Instruments 分析 SwiftUI 性能" },
+            { text: "10.2 解决重复计算", link: "/advanced/10.2_识别并解决视图重复计算问题" },
+            { text: "10.3 Identity 影响", link: "/advanced/10.3_理解 'Identity' 对性能和动画的影响" },
+            { text: "10.4 使用 EquatableView", link: "/advanced/10.4_使用 EquatableView 减少不必要的刷新" },
+            { text: "10.5 懒加载优化", link: "/advanced/10.5_懒加载视图 (LazyVStack, LazyHStack) 的优化技巧" }
+          ]
+        },
+        {
+          text: "第11章 高级动画与转场",
+          collapsible: true,
+          items: [
+            { text: "11.1 matchedGeometryEffect", link: "/advanced/11.1_使用 matchedGeometryEffect 实现英雄动画" },
+            { text: "11.2 自定义 Animatable", link: "/advanced/11.2_创建自定义 Animatable 协议动画" },
+            { text: "11.3 使用 AnimatablePair", link: "/advanced/11.3_利用 AnimatablePair 为多值添加动画" },
+            { text: "11.4 自定义视图转场", link: "/advanced/11.4_实现自定义视图转场 (AnyTransition)" },
+            { text: "11.5 组合与异步转场", link: "/advanced/11.5_组合与异步化转场效果" },
+            { text: "11.6 使用 PhaseAnimator", link: "/advanced/11.6_使用 PhaseAnimator 创建多阶段动画 (iOS 17+)" },
+            { text: "11.7 使用 KeyframeAnimator", link: "/advanced/11.7_使用 KeyframeAnimator 创建关键帧动画 (iOS 17+)" }
+          ]
+        },
+        {
+          text: "第12章 在 SwiftUI 中使用 UIKit/AppKit",
+          collapsible: true,
+          items: [
+            { text: "12.1 UIViewRepresentable", link: "/advanced/12.1_实现 UIViewRepresentable 协议" },
+            { text: "12.2 UIViewControllerRepresentable", link: "/advanced/12.2_实现 UIViewControllerRepresentable 协议" },
+            { text: "12.3 使用 Coordinator", link: "/advanced/12.3_使用 Coordinator 处理代理和回调" },
+            { text: "12.4 管理生命周期", link: "/advanced/12.4_管理 Representable 视图的生命周期" },
+            { text: "12.5 嵌入 WKWebView", link: "/advanced/12.5_在 SwiftUI 中嵌入 WKWebView" }
+          ]
+        },
+        {
+          text: "第13章 在 UIKit/AppKit 中嵌入 SwiftUI",
+          collapsible: true,
+          items: [
+            { text: "13.1 使用 UIHostingController", link: "/advanced/13.1_使用 UIHostingController 嵌入 SwiftUI 视图" },
+            { text: "13.2 在 UITableViewCell 中使用", link: "/advanced/13.2_在 UITableViewCell 中使用 SwiftUI" },
+            { text: "13.3 管理尺寸和布局", link: "/advanced/13.3_管理 SwiftUI 视图的尺寸和布局" },
+            { text: "13.4 实现数据通信", link: "/advanced/13.4_实现 UIKit 与 SwiftUI 之间的数据通信" }
           ]
         }
       ]
