@@ -68,6 +68,10 @@ export default defineConfig({
             text: 'SwiftUI 高阶',
             link: '/advanced/'
           },
+          {
+            text: 'SwiftUI 生命周期',
+            link: '/lifecycle/'
+          },
         ]
       }
     ],
@@ -1445,6 +1449,138 @@ export default defineConfig({
             { text: "13.2 在 UITableViewCell 中使用", link: "/advanced/13.2_在 UITableViewCell 中使用 SwiftUI" },
             { text: "13.3 管理尺寸和布局", link: "/advanced/13.3_管理 SwiftUI 视图的尺寸和布局" },
             { text: "13.4 实现数据通信", link: "/advanced/13.4_实现 UIKit 与 SwiftUI 之间的数据通信" }
+          ]
+        }
+      ],
+      '/lifecycle/': [
+        {
+          text: "第1章 视图的本质与结构",
+          collapsible: true,
+          items: [
+            { text: "1.1 将视图理解为值的概念", link: "/lifecycle/1.1_将视图理解为值的概念" },
+            { text: "1.2 视图作为状态的函数", link: "/lifecycle/1.2_视图作为状态的函数" },
+            { text: "1.3 View协议与body属性", link: "/lifecycle/1.3_View协议与body属性" },
+            { text: "1.4 与UIKit-AppKit视图对象的区别", link: "/lifecycle/1.4_与UIKit-AppKit视图对象的区别" }
+          ]
+        },
+        {
+          text: "第2章 视图身份与生命周期",
+          collapsible: true,
+          items: [
+            { text: "2.1 显式身份：id()修饰符", link: "/lifecycle/2.1_显式身份：id()修饰符" },
+            { text: "2.2 结构性身份", link: "/lifecycle/2.2_结构性身份：视图在层级中的位置" },
+            { text: "2.3 身份对状态持久性的影响", link: "/lifecycle/2.3_身份对状态持久性的影响" },
+            { text: "2.4 身份变化触发视图销毁与重建", link: "/lifecycle/2.4_身份变化如何触发视图销毁与重建" }
+          ]
+        },
+        {
+          text: "第3章 视图的依赖关系与更新",
+          collapsible: true,
+          items: [
+            { text: "3.1 依赖图简介", link: "/lifecycle/3.1_依赖图（Dependency Graph）简介" },
+            { text: "3.2 状态变化触发视图更新", link: "/lifecycle/3.2_状态变化如何触发视图更新" },
+            { text: "3.3 body的计算时机与频率", link: "/lifecycle/3.3_body的计算时机与频率" },
+            { text: "3.4 视图更新的性能考量", link: "/lifecycle/3.4_视图更新的性能考量" }
+          ]
+        },
+        {
+          text: "第4章 视图的初始化过程",
+          collapsible: true,
+          items: [
+            { text: "4.1 init()方法的调用时机", link: "/lifecycle/4.1_init()方法的调用时机" },
+            { text: "4.2 在init()中设置初始状态", link: "/lifecycle/4.2_在init()中设置初始状态" },
+            { text: "4.3 使用自定义init进行依赖注入", link: "/lifecycle/4.3_使用自定义init进行依赖注入" },
+            { text: "4.4 理解视图结构的首次构建", link: "/lifecycle/4.4_理解视图结构的首次构建" }
+          ]
+        },
+        {
+          text: "第5章 视图首次出现在屏幕上",
+          collapsible: true,
+          items: [
+            { text: "5.1 onAppear修饰符的触发时机", link: "/lifecycle/5.1_onAppear修饰符的触发时机" },
+            { text: "5.2 在onAppear中执行网络请求或动画", link: "/lifecycle/5.2_onAppear中执行网络请求或动画" },
+            { text: "5.3 task修饰符管理异步任务", link: "/lifecycle/5.3_task修饰符：异步任务的生命周期管理" },
+            { text: "5.4 task与onAppear的对比", link: "/lifecycle/5.4_task修饰符与onAppear的对比" }
+          ]
+        },
+        {
+          text: "第6章 状态驱动的视图更新",
+          collapsible: true,
+          items: [
+            { text: "6.1 @State管理本地状态", link: "/lifecycle/6.1_@State：管理本地简单值类型状态" },
+            { text: "6.2 @Binding创建双向连接", link: "/lifecycle/6.2_@Binding：创建双向数据连接" },
+            { text: "6.3 onChange响应特定值变化", link: "/lifecycle/6.3_onChange修饰符：响应特定值的变化" },
+            { text: "6.4 onChange的触发条件", link: "/lifecycle/6.4_onChange的触发条件与使用场景" }
+          ]
+        },
+        {
+          text: "第7章 对象类型的状态管理",
+          collapsible: true,
+          items: [
+            { text: "7.1 @StateObject管理引用类型", link: "/lifecycle/7.1_@StateObject：管理引用类型状态的生命周期" },
+            { text: "7.2 @ObservedObject观察外部对象", link: "/lifecycle/7.2_@ObservedObject：观察外部引用类型对象" },
+            { text: "7.3 两种对象包装器的关键区别", link: "/lifecycle/7.3_@StateObject与@ObservedObject的关键区别" },
+            { text: "7.4 @EnvironmentObject共享对象", link: "/lifecycle/7.4_@EnvironmentObject：在视图层级中共享对象" }
+          ]
+        },
+        {
+          text: "第8章 特殊状态属性包装器",
+          collapsible: true,
+          items: [
+            { text: "8.1 @Environment读取环境值", link: "/lifecycle/8.1_@Environment：读取环境值" },
+            { text: "8.2 @AppStorage/@SceneStorage", link: "/lifecycle/8.2_@AppStorage-@SceneStorage：持久化状态" },
+            { text: "8.3 @FocusState管理焦点", link: "/lifecycle/8.3_@FocusState：管理焦点状态" },
+            { text: "8.4 不同状态包装器的适用场景", link: "/lifecycle/8.4_理解不同状态包装器的适用场景" }
+          ]
+        },
+        {
+          text: "第9章 视图从屏幕上消失",
+          collapsible: true,
+          items: [
+            { text: "9.1 onDisappear触发时机", link: "/lifecycle/9.1_onDisappear修饰符的触发时机" },
+            { text: "9.2 在onDisappear中执行清理", link: "/lifecycle/9.2_在onDisappear中执行清理任务" },
+            { text: "9.3 取消订阅或定时器", link: "/lifecycle/9.3_取消订阅或定时器" },
+            { text: "9.4 释放手动管理资源", link: "/lifecycle/9.4_释放手动管理的资源" }
+          ]
+        },
+        {
+          text: "第10章 状态对象的生命周期管理",
+          collapsible: true,
+          items: [
+            { text: "10.1 @StateObject的销毁时机", link: "/lifecycle/10.1_@StateObject的销毁时机" },
+            { text: "10.2 ObservableObject的deinit", link: "/lifecycle/10.2_ObservableObject的deinit方法" },
+            { text: "10.3 使用task自动取消任务", link: "/lifecycle/10.3_使用task修饰符自动取消异步任务" },
+            { text: "10.4 避免内存泄漏", link: "/lifecycle/10.4_避免因强引用导致的内存泄漏" }
+          ]
+        },
+        {
+          text: "第11章 应用与场景生命周期",
+          collapsible: true,
+          items: [
+            { text: "11.1 App协议与生命周期事件", link: "/lifecycle/11.1_App协议与应用生命周期事件" },
+            { text: "11.2 ScenePhase环境值", link: "/lifecycle/11.2_ScenePhase环境值的使用" },
+            { text: "11.3 处理应用前后台切换", link: "/lifecycle/11.3_处理应用进入后台或返回前台" },
+            { text: "11.4 响应场景连接与断开", link: "/lifecycle/11.4_响应场景连接与断开" }
+          ]
+        },
+        {
+          text: "第12章 Navigation与Sheet/Popover生命周期",
+          collapsible: true,
+          items: [
+            { text: "12.1 NavigationStack视图生命周期", link: "/lifecycle/12.1_NavigationStack中视图的生命周期" },
+            { text: "12.2 Sheet和Popover生命周期", link: "/lifecycle/12.2_Sheet和Popover呈现时视图的生命周期" },
+            { text: "12.3 导航中的onAppear行为", link: "/lifecycle/12.3_onAppear-onDisappear在导航中的行为" },
+            { text: "12.4 管理模态视图状态", link: "/lifecycle/12.4_管理模态视图中的状态" }
+          ]
+        },
+        {
+          text: "第13章 与UIKit/AppKit组件的集成",
+          collapsible: true,
+          items: [
+            { text: "13.1 UIViewRepresentable生命周期", link: "/lifecycle/13.1_UIViewRepresentable的生命周期方法" },
+            { text: "13.2 makeUIView方法", link: "/lifecycle/13.2_makeUIView-makeUIViewController方法" },
+            { text: "13.3 updateUIView方法", link: "/lifecycle/13.3_updateUIView-updateUIViewController方法" },
+            { text: "13.4 dismantleUIView与清理", link: "/lifecycle/13.4_dismantleUIView与Coordinator清理" }
           ]
         }
       ]
