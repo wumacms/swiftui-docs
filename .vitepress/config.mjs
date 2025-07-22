@@ -37,6 +37,10 @@ export default defineConfig({
             link: '/custom_views/'
           },
           {
+            text: 'SwiftUI 核心',
+            link: '/core/'
+          },
+          {
             text: 'SwiftUI 网络',
             link: '/network/'
           },
@@ -380,6 +384,172 @@ export default defineConfig({
             { text: '16.2 创建版本标签（Tagging Versions）', link: '/custom_views/16.2_创建版本标签(Tagging_Versions)' },
             { text: '16.3 在 Xcode 中添加 Swift 包依赖', link: '/custom_views/16.3_在Xcode中添加Swift包依赖' },
             { text: '16.4 更新和维护组件库', link: '/custom_views/16.4_更新和维护组件库' }
+          ]
+        }
+      ],
+      '/core/': [
+        {
+          text: "第1章 视图与布局系统",
+          collapsible: true,
+          items: [
+            { text: "1.1 声明式语法入门", link: "/core/1.1_声明式语法入门" },
+            { text: "1.2 构建基本视图", link: "/core/1.2_构建基本视图：Text, Image, Shape" },
+            { text: "1.3 使用Stack组合视图", link: "/core/1.3_使用 VStack, HStack, ZStack 组合视图" },
+            { text: "1.4 Spacer与Divider", link: "/core/1.4_掌握 Spacer 与 Divider" },
+            { text: "1.5 布局微调技术", link: "/core/1.5_使用 Padding, Frame, Offset 进行微调" },
+            { text: "1.6 对齐与分布", link: "/core/1.6_对齐与分布指南" },
+            { text: "1.7 安全区域处理", link: "/core/1.7_安全区域与边缘忽略" }
+          ]
+        },
+        {
+          text: "第2章 控件与用户交互",
+          collapsible: true,
+          items: [
+            { text: "2.1 Button的使用", link: "/core/2.1_按钮 Button 的使用与自定义" },
+            { text: "2.2 文本输入控件", link: "/core/2.2_文本输入：TextField 与 TextEditor" },
+            { text: "2.3 Toggle与Slider", link: "/core/2.3_开关 Toggle 与滑块 Slider" },
+            { text: "2.4 Picker样式", link: "/core/2.4_选择器 Picker 的不同样式" },
+            { text: "2.5 Stepper与DatePicker", link: "/core/2.5_步进器 Stepper 与日期选择器 DatePicker" },
+            { text: "2.6 手势识别", link: "/core/2.6_手势识别：Tap, LongPress, Drag" }
+          ]
+        },
+        {
+          text: "第3章 视图内部状态",
+          collapsible: true,
+          items: [
+            { text: "3.1 @State管理状态", link: "/core/3.1_使用 @State 管理简单值类型" },
+            { text: "3.2 @Binding双向绑定", link: "/core/3.2_使用 @Binding 创建双向绑定" },
+            { text: "3.3 视图身份与生命周期", link: "/core/3.3_理解视图的身份与生命周期" }
+          ]
+        },
+        {
+          text: "第4章 跨视图数据共享",
+          collapsible: true,
+          items: [
+            { text: "4.1 @StateObject管理对象", link: "/core/4.1_使用 @StateObject 管理引用类型生命周期" },
+            { text: "4.2 @ObservedObject订阅", link: "/core/4.2_使用 @ObservedObject 订阅外部对象" },
+            { text: "4.3 @EnvironmentObject全局共享", link: "/core/4.3_使用 @EnvironmentObject 进行全局数据传递" },
+            { text: "4.4 @Published属性包装器", link: "/core/4.4_理解 @Published 属性包装器" }
+          ]
+        },
+        {
+          text: "第5章 环境与偏好设置",
+          collapsible: true,
+          items: [
+            { text: "5.1 读取@Environment", link: "/core/5.1_读取环境值 @Environment" },
+            { text: "5.2 自定义环境键", link: "/core/5.2_自定义环境键 EnvironmentKey" },
+            { text: "5.3 PreferenceKey使用", link: "/core/5.3_使用 PreferenceKey 从子视图向上传递数据" },
+            { text: "5.4 AnchorPreferences对齐", link: "/core/5.4_使用 AnchorPreferences 进行几何对齐" }
+          ]
+        },
+        {
+          text: "第6章 构建动态列表",
+          collapsible: true,
+          items: [
+            { text: "6.1 List基本用法", link: "/core/6.1_List 的基本用法与数据源" },
+            { text: "6.2 ForEach与Identifiable", link: "/core/6.2_ForEach 的使用与 Identifiable 协议" },
+            { text: "6.3 自定义列表行", link: "/core/6.3_自定义列表行视图" },
+            { text: "6.4 列表编辑模式", link: "/core/6.4_实现列表的编辑模式：移动与删除" },
+            { text: "6.5 分组列表与大纲", link: "/core/6.5_分组列表 Section 与大纲视图 OutlineGroup" }
+          ]
+        },
+        {
+          text: "第7章 导航与视图呈现",
+          collapsible: true,
+          items: [
+            { text: "7.1 NavigationStack使用", link: "/core/7.1_NavigationStack 与 NavigationLink" },
+            { text: "7.2 编程式导航", link: "/core/7.2_导航路径与编程式导航" },
+            { text: "7.3 导航栏定制", link: "/core/7.3_导航栏标题与按钮定制" },
+            { text: "7.4 模态呈现", link: "/core/7.4_模态呈现：Sheet 与 FullScreenCover" },
+            { text: "7.5 警报与确认对话框", link: "/core/7.5_警报 Alert 与确认对话框 confirmationDialog" }
+          ]
+        },
+        {
+          text: "第8章 高级布局技术",
+          collapsible: true,
+          items: [
+            { text: "8.1 ScrollView使用", link: "/core/8.1_滚动视图 ScrollView 与 ScrollViewReader" },
+            { text: "8.2 GeometryReader", link: "/core/8.2_几何读取器 GeometryReader" },
+            { text: "8.3 自定义布局容器", link: "/core/8.3_自定义布局容器 Layout 协议" },
+            { text: "8.4 网格布局", link: "/core/8.4_网格布局：LazyVGrid 与 LazyHGrid" },
+            { text: "8.5 视图坐标转换", link: "/core/8.5_视图坐标空间转换" }
+          ]
+        },
+        {
+          text: "第9章 自定义视图修饰符",
+          collapsible: true,
+          items: [
+            { text: "9.1 封装通用样式", link: "/core/9.1_封装通用样式" },
+            { text: "9.2 创建ViewModifier", link: "/core/9.2_创建自定义 ViewModifier 协议实现" },
+            { text: "9.3 链式调用原理", link: "/core/9.3_链式调用修饰符的原理" }
+          ]
+        },
+        {
+          text: "第10章 动画基础",
+          collapsible: true,
+          items: [
+            { text: "10.1 隐式动画", link: "/core/10.1_隐式动画 .animation() 修饰符" },
+            { text: "10.2 显式动画", link: "/core/10.2_显式动画 withAnimation 代码块" },
+            { text: "10.3 动画曲线控制", link: "/core/10.3_控制动画曲线与延迟" },
+            { text: "10.4 视图匹配动画", link: "/core/10.4_使用 .matchedGeometryEffect 实现视图匹配动画" }
+          ]
+        },
+        {
+          text: "第11章 高级动画与转场",
+          collapsible: true,
+          items: [
+            { text: "11.1 视图转场", link: "/core/11.1_视图转场 .transition() 修饰符" },
+            { text: "11.2 自定义转场", link: "/core/11.2_创建自定义 AnyTransition" },
+            { text: "11.3 Animatable协议", link: "/core/11.3_Animatable 协议与矢量动画" },
+            { text: "11.4 TimelineView应用", link: "/core/11.4_TimelineView 与 Canvas 的应用" }
+          ]
+        },
+        {
+          text: "第12章 在SwiftUI中使用UIKit/AppKit",
+          collapsible: true,
+          items: [
+            { text: "12.1 UIViewRepresentable", link: "/core/12.1_使用 UIViewRepresentable 封装 UIKit 视图" },
+            { text: "12.2 UIViewControllerRepresentable", link: "/core/12.2_使用 UIViewControllerRepresentable 封装视图控制器" },
+            { text: "12.3 协调器处理", link: "/core/12.3_处理协调器 Coordinator" }
+          ]
+        },
+        {
+          text: "第13章 在UIKit/AppKit中使用SwiftUI",
+          collapsible: true,
+          items: [
+            { text: "13.1 UIHostingController", link: "/core/13.1_使用 UIHostingController 嵌入 SwiftUI 视图" },
+            { text: "13.2 在UITableViewCell中使用", link: "/core/13.2_在 UITableViewCell 中嵌入 SwiftUI 视图" },
+            { text: "13.3 尺寸与更新管理", link: "/core/13.3_管理 SwiftUI 视图的尺寸与更新" }
+          ]
+        },
+        {
+          text: "第14章 异步操作与数据获取",
+          collapsible: true,
+          items: [
+            { text: "14.1 async-await使用", link: "/core/14.1_在 SwiftUI 中使用 async-await" },
+            { text: "14.2 task修饰符", link: "/core/14.2_任务修饰符 .task()" },
+            { text: "14.3 下拉刷新", link: "/core/14.3_下拉刷新 .refreshable()" },
+            { text: "14.4 加载与错误处理", link: "/core/14.4_处理加载与错误状态" }
+          ]
+        },
+        {
+          text: "第15章 性能优化技巧",
+          collapsible: true,
+          items: [
+            { text: "15.1 视图更新分析", link: "/core/15.1_分析视图更新的原因" },
+            { text: "15.2 EquatableView", link: "/core/15.2_使用 EquatableView 减少不必要的刷新" },
+            { text: "15.3 懒加载视图", link: "/core/15.3_懒加载视图 Lazy Stacks" },
+            { text: "15.4 性能分析工具", link: "/core/15.4_Instruments SwiftUI 性能分析工具" }
+          ]
+        },
+        {
+          text: "第16章 可访问性与本地化",
+          collapsible: true,
+          items: [
+            { text: "16.1 可访问性标签", link: "/core/16.1_为视图添加可访问性标签与提示" },
+            { text: "16.2 动态类型支持", link: "/core/16.2_支持动态类型 (Dynamic Type)" },
+            { text: "16.3 字符串本地化", link: "/core/16.3_实现字符串本地化" },
+            { text: "16.4 RTL布局处理", link: "/core/16.4_处理从右到左 (RTL) 布局" }
           ]
         }
       ],
@@ -1583,7 +1753,7 @@ export default defineConfig({
             { text: "13.4 dismantleUIView与清理", link: "/lifecycle/13.4_dismantleUIView与Coordinator清理" }
           ]
         }
-      ]
+      ],
     },
 
     // 社交链接
