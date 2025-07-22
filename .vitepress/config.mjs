@@ -3,7 +3,8 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "SwiftUIX",
-  description: "收集全网的SwiftUI学习资源，一站式资源导航",
+  description: "专注于分享 SwiftUI 实战技巧与开发经验",
+  head: [['link', { rel: 'icon', href: '/logo.svg' }]],
   base: '/swiftui-docs/',
   vite: {
     server: {
@@ -15,20 +16,29 @@ export default defineConfig({
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    logo: '/logo.svg',
+    // 搜索
+    search: {
+      provider: 'local',
+      options: {
+        translations: {
+          button: {
+            buttonText: "搜索文档",
+            buttonAriaLabel: "搜索文档",
+          },
+          modal: {
+            noResultsText: "无法找到相关结果",
+            resetButtonTitle: "清除查询条件",
+            footer: {
+              selectText: "选择",
+              navigateText: "切换",
+            }
+          }
+        }
+      }
+    },
     nav: [
       { text: '首页', link: '/' },
-      // {
-      //   text: '文档', items: [
-      //     {
-      //       text: '指南',
-      //       link: '/guide/' // 指向 /guide/ 的入口页面
-      //     },
-      //     {
-      //       text: 'API',
-      //       link: '/api/' // 指向 /api/ 的入口页面
-      //     }
-      //   ]
-      // },
       {
         text: '教程', items: [
           {
@@ -84,14 +94,6 @@ export default defineConfig({
     ],
 
     sidebar: {
-      // '/guide/': [
-      //   { text: '开始使用', link: '/guide/' },
-      //   { text: '安装指南', link: '/guide/install' }
-      // ],
-      // '/api/': [
-      //   { text: 'API 总览', link: '/api/' },
-      //   { text: '配置项', link: '/api/config' }
-      // ],
       '/base/': [
         {
           text: '第1章 开发环境与项目创建',
@@ -1764,5 +1766,11 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/wumacms' },
       { icon: 'bilibili', link: 'https://space.bilibili.com/249603883' }
     ],
+
+    // 页脚
+    footer: {
+      message: '本站使用 VitePress 制作',
+      copyright: '版权所有 © 2025 SwiftUIX'
+    },
   }
 })
