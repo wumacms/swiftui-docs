@@ -5,7 +5,7 @@ export default defineConfig({
   title: "SwiftUIX",
   description: "专注于分享 SwiftUI 实战技巧与开发经验",
   head: [['link', { rel: 'icon', href: './logo.svg' }]],
-  base: '/swiftui-docs/',
+  base: '/',
   vite: {
     server: {
       open: true
