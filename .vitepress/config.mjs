@@ -17,6 +17,19 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/logo.svg',
+    // ✅ 页面右侧目录（锚点导航）
+    outline: {
+      label: '本页内容' // 原为 'On this page'
+    },
+
+    // ✅ 页面底部上下页导航
+    docFooter: {
+      prev: '上一篇',
+      next: '下一篇'
+    },
+
+    // ✅ 返回顶部按钮（如果启用）
+    returnToTopLabel: '返回顶部',
     // 搜索
     search: {
       provider: 'local',
@@ -40,54 +53,66 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       {
-        text: '教程', items: [
+        text: '教程', activeMatch: '^/(base|custom_views|core|network|geometry|refactor|animation|purchase|thinking|grid|advanced|lifecycle)/', items: [
           {
             text: 'SwiftUI 入门',
-            link: '/base/'
+            link: '/base/',
+            activeMatch: '^/base/'
           },
           {
             text: 'SwiftUI 视图',
-            link: '/custom_views/'
+            link: '/custom_views/',
+            activeMatch: '^/custom_views/'
           },
           {
             text: 'SwiftUI 核心',
-            link: '/core/'
+            link: '/core/',
+            activeMatch: '^/core/'
           },
           {
             text: 'SwiftUI 网络',
-            link: '/network/'
+            link: '/network/',
+            activeMatch: '^/network/'
           },
           {
             text: 'SwiftUI 动效',
-            link: '/geometry/'
+            link: '/geometry/',
+            activeMatch: '^/geometry/'
           },
           {
             text: 'SwiftUI 重构',
-            link: '/refactor/'
+            link: '/refactor/',
+            activeMatch: '^/refactor/'
           },
           {
             text: 'SwiftUI 动画',
-            link: '/animation/'
+            link: '/animation/',
+            activeMatch: '^/animation/'
           },
           {
             text: 'SwiftUI 内购',
-            link: '/purchase/'
+            link: '/purchase/',
+            activeMatch: '^/purchase/'
           },
           {
             text: 'SwiftUI 思想',
-            link: '/thinking/'
+            link: '/thinking/',
+            activeMatch: '^/thinking/'
           },
           {
             text: 'SwiftUI 网格',
-            link: '/grid/'
+            link: '/grid/',
+            activeMatch: '^/grid/'
           },
           {
             text: 'SwiftUI 高阶',
-            link: '/advanced/'
+            link: '/advanced/',
+            activeMatch: '^/advanced/'
           },
           {
             text: 'SwiftUI 生命周期',
-            link: '/lifecycle/'
+            link: '/lifecycle/',
+            activeMatch: '^/lifecycle/'
           },
         ]
       }
@@ -95,6 +120,13 @@ export default defineConfig({
 
     sidebar: {
       '/base/': [
+        {
+          text: '概览',
+          collapsed: false,
+          items: [
+            { text: '内容简介', link: '/base/' }  // 👈 指向 index.md
+          ]
+        },
         {
           text: '第1章 开发环境与项目创建',
           collapsed: false,
@@ -231,6 +263,13 @@ export default defineConfig({
         }
       ],
       '/custom_views/': [
+        {
+          text: '概览',
+          collapsed: false,
+          items: [
+            { text: '内容简介', link: '/custom_views/' }  // 👈 指向 index.md
+          ]
+        },
         {
           text: '第1章 自定义视图基础',
           collapsed: false,
@@ -393,6 +432,13 @@ export default defineConfig({
         }
       ],
       '/core/': [
+        {
+          text: '概览',
+          collapsed: false,
+          items: [
+            { text: '内容简介', link: '/core/' }  // 👈 指向 index.md
+          ]
+        },
         {
           text: "第1章 视图与布局系统",
           collapsible: true,
@@ -560,6 +606,13 @@ export default defineConfig({
       ],
       '/network/': [
         {
+          text: '概览',
+          collapsed: false,
+          items: [
+            { text: '内容简介', link: '/network/' }  // 👈 指向 index.md
+          ]
+        },
+        {
           text: '第1章 理解网络请求核心概念',
           items: [
             { text: 'HTTP/HTTPS协议基础', link: '/network/1.1_HTTP、HTTPS协议基础' },
@@ -680,6 +733,13 @@ export default defineConfig({
       ],
       '/geometry/': [
         {
+          text: '概览',
+          collapsed: false,
+          items: [
+            { text: '内容简介', link: '/geometry/' }  // 👈 指向 index.md
+          ]
+        },
+        {
           text: '第1章 理解 matchedGeometryEffect 的基本原理',
           items: [
             { text: '什么是matchedGeometryEffect？', link: '/geometry/1.1_什么是matchedGeometryEffect？' },
@@ -761,6 +821,13 @@ export default defineConfig({
         },
       ],
       '/refactor/': [
+        {
+          text: '概览',
+          collapsed: false,
+          items: [
+            { text: '内容简介', link: '/refactor/' }  // 👈 指向 index.md
+          ]
+        },
         {
           text: '第1章 识别并提取可复用视图',
           collapsed: false,
@@ -913,6 +980,13 @@ export default defineConfig({
         }
       ],
       '/animation/': [
+        {
+          text: '概览',
+          collapsed: false,
+          items: [
+            { text: '内容简介', link: '/animation/' }  // 👈 指向 index.md
+          ]
+        },
         {
           text: "第1章 隐式动画",
           collapsible: true,
@@ -1089,6 +1163,13 @@ export default defineConfig({
       ],
       '/purchase/': [
         {
+          text: '概览',
+          collapsed: false,
+          items: [
+            { text: '内容简介', link: '/purchase/' }  // 👈 指向 index.md
+          ]
+        },
+        {
           text: "第1章 App Store Connect配置",
           collapsible: true,
           items: [
@@ -1228,6 +1309,13 @@ export default defineConfig({
       ],
       '/thinking/': [
         {
+          text: '概览',
+          collapsed: false,
+          items: [
+            { text: '内容简介', link: '/thinking/' }  // 👈 指向 index.md
+          ]
+        },
+        {
           text: "第1章 声明式语法基础",
           collapsible: true,
           items: [
@@ -1362,6 +1450,13 @@ export default defineConfig({
       ],
       '/grid/': [
         {
+          text: '概览',
+          collapsed: false,
+          items: [
+            { text: '内容简介', link: '/grid/' }  // 👈 指向 index.md
+          ]
+        },
+        {
           text: "第1章 LazyVGrid：垂直网格布局入门",
           collapsible: true,
           items: [
@@ -1479,6 +1574,13 @@ export default defineConfig({
         }
       ],
       '/advanced/': [
+        {
+          text: '概览',
+          collapsed: false,
+          items: [
+            { text: '内容简介', link: '/advanced/' }  // 👈 指向 index.md
+          ]
+        },
         {
           text: "第1章 GeometryReader 深度解析",
           collapsible: true,
@@ -1628,6 +1730,13 @@ export default defineConfig({
         }
       ],
       '/lifecycle/': [
+        {
+          text: '概览',
+          collapsed: false,
+          items: [
+            { text: '内容简介', link: '/lifecycle/' }  // 👈 指向 index.md
+          ]
+        },
         {
           text: "第1章 视图的本质与结构",
           collapsible: true,
