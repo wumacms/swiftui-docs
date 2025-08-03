@@ -1,8 +1,11 @@
-# Node modules
+# 依赖包
 node_modules/
 
-# VitePress build output
+# VitePress 构建输出
 .vitepress/dist/
+
+# Vite 缓存目录
+.vite/
 
 # Temp files
 .vitepress/cache/
@@ -10,30 +13,23 @@ node_modules/
 .temp/
 .cache/
 
-# Log files
+# 锁文件，仅保留 yarn.lock，忽略其他锁文件
+package-lock.json
+pnpm-lock.yaml
+
+# macOS 系统文件
+.DS_Store
+
+# 日志文件
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Local env files
-.env.local
-.env.*.local
-
-# macOS system files
-.DS_Store
-
-# VSCode settings (optional, if you don’t want to track user-specific configs)
+# 编辑器配置文件（根据需要保留或忽略）
+.idea/
 .vscode/
 
-# IDE files
-.idea/
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-
-# Optional: ignore lock file if using specific package manager only
-# package-lock.json
-# yarn.lock
-# pnpm-lock.yaml
+# 环境变量文件（一般忽略）
+.env*
+!.env.example
