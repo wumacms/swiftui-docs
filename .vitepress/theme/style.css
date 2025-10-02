@@ -137,3 +137,17 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
+/**
+ * 通过 CSS 禁用用户选择和拖动图片
+ * -------------------------------------------------------------------------- */
+body {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+img {
+  -webkit-user-drag: none;
+}
+
