@@ -18,7 +18,7 @@ hero:
       link: /advanced
     - theme: alt
       text: SwiftUI 100天
-      link: /100-days
+      link: /100days
 
 features:
   - icon: 📘
