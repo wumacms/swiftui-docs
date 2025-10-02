@@ -1872,7 +1872,7 @@ export default defineConfig({
 
     // 社交链接
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/wumacms' },
+      { icon: 'github', link: 'https://github.com/swiftuihome' },
       { icon: 'bilibili', link: 'https://space.bilibili.com/249603883' }
     ],
 
