@@ -11,34 +11,34 @@ hero:
     alt: logo
   actions:
     - theme: brand
-      text: 开始学习
+      text: 基础入门
       link: /base
     - theme: alt
-      text: 组件示例
-      link: /custom_views
+      text: 进阶开发
+      link: /advanced
 
 features:
   - icon: 📘
-    title: 系统化 SwiftUI 教程
-    details: 从基础控件到复杂布局、动画和数据绑定，打造完整的 SwiftUI 学习路径，适合所有开发者。
+    title: SwiftUI 开发入门
+    details: 从零开始带你系统学习苹果官方的现代化UI框架。全书分章节由浅入深，涵盖了视图的基础概念、布局容器、状态管理、数据驱动开发、常用控件、动画与手势交互等SwiftUI核心内容。
     link: /base
     linkText: 开始学习
 
   - icon: 🧩
-    title: 可复用组件库
-    details: 提供封装良好的常用 UI 组件和代码片段，加速你的 SwiftUI 开发流程，提升项目质量。
+    title: SwiftUI 自定义视图组件
+    details: 从安装 Xcode 和第一个项目开始，读者将逐步掌握视图的创建、布局容器的使用、数据的双向绑定与状态驱动更新等核心技能，并进一步探索 SwiftUI 中的组件封装方式，包括自定义修饰符（ViewModifier）、视图样式（Style）、动画与过渡、手势交互等进阶主题。
     link: /custom_views
-    linkText: 查看组件库
+    linkText: 开始学习
 
   - icon: 🚀
-    title: 实战项目驱动
-    details: 通过待办事项、天气 App 等多个完整项目，从实战中掌握 SwiftUI 的核心用法和最佳实践。
+    title: SwiftUI 核心技术与高级实践
+    details: 从基础语法到高级实践，完整覆盖SwiftUI开发的各个方面。全书16章内容循序渐进，既包含视图构建、状态管理等基础知识，也涵盖自定义布局、高级动画、性能优化等进阶主题，特别关注SwiftUI与现代异步编程的结合方式。
     link: /core
-    linkText: 浏览项目案例
+    linkText: 开始学习
 
   - icon: 🔗
-    title: 融合 Apple 生态
-    details: 深度整合 Combine、SwiftData、CoreData 等原生技术，打造高性能、现代化的应用。
-    link: /thinking
-    linkText: 深入探索生态
+    title: SwiftUI动画核心技术与实践
+    details: 全面解析 SwiftUI 动画从基础概念到高级应用的完整知识体系。全书以"构建流畅、高效的动画体验"为核心目标，通过系统性的理论讲解和丰富的实战案例，帮助开发者深入理解 SwiftUI 动画机制，并掌握在各种场景下实现专业级动画效果的实践方法。
+    link: /animation
+    linkText: 开始学习
 ---

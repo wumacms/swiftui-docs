@@ -53,7 +53,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       {
-        text: '教程', activeMatch: '^/(base|custom_views|core|network|geometry|refactor|animation|purchase|thinking|grid|advanced|lifecycle)/', items: [
+        text: '更多教程', activeMatch: '^/(base|custom_views|core|network|geometry|refactor|animation|purchase|thinking|grid|advanced|lifecycle)/', items: [
           {
             text: 'SwiftUI 入门',
             link: '/base/',
