@@ -4,18 +4,27 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "SwiftUIX",
   description: "专注于分享 SwiftUI 实战技巧与开发经验",
-  head: [
-    ['link', { rel: 'icon', href: './logo.svg' }],
-    // 禁止 HTML 缓存的 meta 配置
-    ['meta', { 'http-equiv': 'Cache-Control', content: 'no-cache, no-store, must-revalidate' }],
-    ['meta', { 'http-equiv': 'Pragma', content: 'no-cache' }],
-    ['meta', { 'http-equiv': 'Expires', content: '0' }]
-  ],
+  head: [['link', { rel: 'icon', href: './logo.svg' }]],
   base: '/',
   vite: {
     server: {
       open: true
-    }
+    },
+    plugins: [
+      {
+        name: 'html-transform',
+        transformIndexHtml(html) {
+          const version = Date.now() // 用时间戳作为版本号
+          return html.replace(
+            /(<script type="module" src="[^"]+)(\.js")/g,
+            `$1.js?v=${version}"`
+          ).replace(
+            /(<link rel="stylesheet" href="[^"]+)(\.css")/g,
+            `$1.css?v=${version}"`
+          )
+        }
+      }
+    ]
   },
   markdown: {
     lineNumbers: true
