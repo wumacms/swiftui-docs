@@ -14,17 +14,18 @@ const giscusContainer = ref(null)
 
 // Giscus 配置 - 替换为你的实际配置！
 const giscusConfig = {
-    repo: 'wumacms/swiftui-docs', // 修改为你的仓库
-    repoId: 'R_kgDOPNTznQ',              // 在 giscus.app 获取
-    category: 'Announcements',           // Discussion 分类名称
-    categoryId: 'DIC_kwDOPNTznc4CwMtp',      // 在 giscus.app 获取
+    repo: 'swiftuihome/swiftuix-comments', // 修改为你的仓库
+    repoId: 'R_kgDOP7qyFA',              // 在 giscus.app 获取
+    category: 'General',           // Discussion 分类名称
+    categoryId: 'DIC_kwDOP7qyFM4CwNPh',      // 在 giscus.app 获取
     mapping: 'pathname',                 // 使用页面路径作为标识
     strict: '0',
     reactionsEnabled: '1',
     emitMetadata: '0',
     inputPosition: 'top',
     lang: 'zh-CN',
-    loading: 'lazy'
+    loading: 'lazy',
+    crossorigin: 'anonymous'
 }
 
 // 加载 Giscus 脚本
@@ -49,6 +50,7 @@ const loadGiscus = () => {
     script.setAttribute('data-input-position', giscusConfig.inputPosition)
     script.setAttribute('data-lang', giscusConfig.lang)
     script.setAttribute('data-loading', giscusConfig.loading)
+    script.setAttribute('crossorigin', giscusConfig.crossorigin)
 
     // 根据主题设置
     script.setAttribute('data-theme', isDark.value ? 'dark' : 'light')
