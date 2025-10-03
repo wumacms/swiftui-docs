@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "SwiftUIX"
-  text: "专一个专注于 SwiftUI 知识分享的网站"
+  text: "探索SwiftUI的无限可能"
   tagline: "从入门到进阶，掌握 SwiftUI 的每一个细节"
   image:
     src: /logo.svg
