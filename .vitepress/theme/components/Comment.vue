@@ -16,7 +16,7 @@ const giscusContainer = ref(null)
 const giscusConfig = {
     repo: 'wumacms/swiftui-docs', // 修改为你的仓库
     repoId: 'R_kgDOPNTznQ',              // 在 giscus.app 获取
-    category: 'General',           // Discussion 分类名称
+    category: 'Announcements',           // Discussion 分类名称
     categoryId: 'DIC_kwDOPNTznc4CwMtp',      // 在 giscus.app 获取
     mapping: 'pathname',                 // 使用页面路径作为标识
     strict: '0',
