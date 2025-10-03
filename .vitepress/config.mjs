@@ -9,22 +9,7 @@ export default defineConfig({
   vite: {
     server: {
       open: true
-    },
-    plugins: [
-      {
-        name: 'html-transform',
-        transformIndexHtml(html) {
-          const version = Date.now() // 用时间戳作为版本号
-          return html.replace(
-            /(<script type="module" src="[^"]+)(\.js")/g,
-            `$1.js?v=${version}"`
-          ).replace(
-            /(<link rel="stylesheet" href="[^"]+)(\.css")/g,
-            `$1.css?v=${version}"`
-          )
-        }
-      }
-    ]
+    }
   },
   markdown: {
     lineNumbers: true
