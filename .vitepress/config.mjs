@@ -1881,5 +1881,13 @@ export default defineConfig({
       message: '本站使用 VitePress 制作',
       copyright: '版权所有 © 2025 SwiftUIX'
     },
+  },
+  // 确保 Vue 组件被正确处理
+  vue: {
+    template: {
+      compilerOptions: {
+        isCustomElement: (tag) => tag === 'giscus-widget'
+      }
+    }
   }
 })
