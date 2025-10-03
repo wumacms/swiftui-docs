@@ -22,6 +22,7 @@ const giscusConfig = {
     strict: '0',
     reactionsEnabled: '1',
     emitMetadata: '0',
+    term: '1',
     inputPosition: 'top',
     lang: 'zh-CN',
     loading: 'lazy'
