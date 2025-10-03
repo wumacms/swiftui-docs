@@ -4,7 +4,13 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "SwiftUIX",
   description: "专注于分享 SwiftUI 实战技巧与开发经验",
-  head: [['link', { rel: 'icon', href: './logo.svg' }]],
+  head: [
+    ['link', { rel: 'icon', href: './logo.svg' }],
+    // 禁止 HTML 缓存的 meta 配置
+    ['meta', { 'http-equiv': 'Cache-Control', content: 'no-cache, no-store, must-revalidate' }],
+    ['meta', { 'http-equiv': 'Pragma', content: 'no-cache' }],
+    ['meta', { 'http-equiv': 'Expires', content: '0' }]
+  ],
   base: '/',
   vite: {
     server: {
